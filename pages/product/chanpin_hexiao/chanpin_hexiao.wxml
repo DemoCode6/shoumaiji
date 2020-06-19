@@ -1,0 +1,41 @@
+<view class="states">
+  <view style="margin-top: 0.5rem;">订单状态：
+    <block wx:if="{{view.res.status == 0}}">
+      待付款
+    </block>
+    <block wx:if="{{view.res.status == 1}}">
+      {{view.res.peisong_type ? '到店自提(' + view.res.get_dasuan_dianpu.name + ')' : '待发货'}}
+    </block>
+    <block wx:if="{{view.res.status == 2}}">
+      已发货
+    </block>
+    <block wx:if="{{view.res.status == 3}}">
+      已收货
+    </block>
+  </view>
+</view>
+
+<view class="orders">
+  <view class="aa">
+    <view style="font-size: 28.5rpx;width: 95%;margin-left: 2.5%;margin-bottom: 11.25rpx;font-weight: 600;">商品详情</view>
+    <!-- 未付款 -->
+    <block wx:for="{{view.res.getdetail}}" wx:for-item="vv">
+      <view class="abig">
+        <view class="omg">
+          <image src="{{globalData.img_domain}}/{{vv.getproduct.img}}" mode="widthFix"></image>
+        </view>
+        <view class="do">
+          <view class="inf">
+            <view class="nns">{{vv.getproduct.name}}</view>
+            <view class="ospan">
+              <text>{{vv.mingzhi}}</text>
+              <text>x{{vv.number}}</text>
+            </view>
+          </view>
+          <view class="price">￥{{vv.price}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<view catchtap="tijiao" wx:if="{{view.res.status == 1 || view.res.status == 2}}" style="width: 80%;height: 80rpx;background-color: #00B26A;margin: 40rpx auto;line-height: 80rpx;text-align: center;color: #fff;border-radius: 10rpx;font-size: 35rpx;">确 定 核 销</view>

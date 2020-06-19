@@ -1,0 +1,208 @@
+/**app.wxss**/
+page{
+  /* padding-bottom: 90rpx; */
+}
+
+@import '/iconfont/iconfont.wxss';
+text{
+  font-size: 26.25rpx;
+}
+view{
+  font-size: 26.25rpx;
+}
+
+.wxParse-p image{width: 100%;}
+
+.addcar{
+	width: 100%;
+	height: 75rpx;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: white;
+	border-top: 1px solid #E5E5E5;
+	padding: 11.25rpx 0;
+}
+
+.addcars .howa{
+	width: 50%;
+	float: left;
+	height: 100%;
+}
+
+.addcar .link{
+	width: 45%;
+	float: left;
+	height: 100%;
+}
+
+
+
+.addcar .howa{
+	width: 50%;
+	float: left;
+	margin-left: 2.5%;
+	height: 100%;
+	height: 75rpx;
+	border-radius: 19px;
+	overflow: hidden;
+	/* margin-top: 0.6rem; */
+}
+
+.addcars .howa{
+	height: 75rpx;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	margin-top: 90rpx;
+}
+
+.addcar .howa>view{
+	width: 50%;
+	float: left;
+	text-align: center;
+	height: 75rpx;
+	line-height: 75rpx;
+	color: white;
+}
+
+
+.addcar .link .kf{
+	width: 33.3%;
+	float: left;
+	height: 100%;
+	text-align: center;
+}
+
+.addcar .link .kf view{
+	color: #b7b7b7;
+}
+
+.addcar .link .kf view{
+	width: 100%;
+	height:37.5rpx;
+	margin-top: 6rpx;
+	position: relative;
+}
+
+.addcar .link .kf button{
+	width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+	height:37.5rpx;
+	margin-top: 6rpx;
+	position: relative;
+  line-height: 47.5rpx;
+  color: #b7b7b7;
+  font-size: 26.25rpx;
+  padding: 0;
+}
+button::after{
+border: none;
+}
+
+.addcar .link .kf view .nan{
+	position: absolute;
+	display: block;
+	width: 26.25rpx;
+    height: 26.25rpx;
+	border-radius: 50%;
+	background-color: #ff5933;
+	color: white;
+	text-align: center;
+	line-height: 28.5rpx;
+	right: 15rpx;
+	top: -11.25rpx;
+}
+
+.addcar .link .kf image{
+	width: 37.5rpx;
+}
+
+.logo{
+	width: 100%;
+	overflow: hidden;
+	height: 76.11rpx;
+	background-color: #000000;
+	text-align: center;
+}
+
+.logo image{
+  width: 30%;
+	margin-top: 21.975rpx;
+}
+
+.ouls{
+	width: 100%;
+	overflow: hidden;
+	height: 76.11rpx;
+}
+
+.ouls .head_li{
+	width: 20%;
+	float: left;
+	height: 100%;
+}
+
+.ouls .head_li navigator{
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 76.11rpx;
+	position: relative;
+}
+
+.ouls .head_li navigator text{
+	width: 31.95rpx;
+	border-bottom: 2px solid #5AA572;
+	position: absolute;
+	bottom:7.5rpx;
+	left: 50%;
+	margin-left: -15.975rpx;
+	display: none;
+}
+
+.ouls .foc navigator text{
+	display: block;
+}
+
+.footer{
+ width:100%;
+ overflow:hidden;
+ height:95rpx;
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ background-color: white;
+ border-top: 1px solid #e1e1e1;
+}
+
+.footer .foot_one{
+  width: 25%;
+  float: left;
+  height: 100%;
+  text-align: center;
+}
+
+.foot_one navigator{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.foot_one navigator view{
+  width: 100%;
+  height: 58rpx;
+  overflow: hidden;
+}
+
+.foot_one navigator view image{
+  width: 55rpx;
+  height: auto;
+  margin-top: 5rpx;
+}
+
+.foot_one navigator view text{
+  line-height: 30rpx;
+}

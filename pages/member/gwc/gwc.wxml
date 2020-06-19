@@ -1,0 +1,63 @@
+<view class="heads">
+  <block>
+    <view class="{{type == 1 ? 'ffa' : ''}}" catchtap="onchange" id='1'>
+      <text>售卖机</text>
+    </view>
+  </block>
+
+  <block>
+    <view class="{{type == 2 ? 'ffa' : ''}}" catchtap="onchange" id='2'>
+      <text>物料</text>
+    </view>
+  </block>
+</view>
+
+<block wx:for="{{view.res}}" wx:for-index="key" wx:for-item="vo">
+  <view class="infor" style="margin-top: 60rpx;"  wx:if="{{vo.getproduct.type == type}}">
+    <view class="xz onxz" catchtap='itemSelected' id='{{key}}'>
+      <text style="background: url({{vo.isSelected? globalData.static_domain+'ook.png':''}})no-repeat;background-size: 100% 100%;"></text>
+    </view>
+    <view class="nunp" style="width: 90%;">
+      <view class="pict">
+        <navigator hover-class="none" url="/pages/product/detail/detail?id={{vo.product_id}}">
+          <image src="{{globalData.img_domain}}/{{vo.getproduct.img}}" mode="widthFix" style='width:100%;' />
+        </navigator>
+      </view>
+      <view class="namea">
+        <view class="proname">
+          <navigator hover-class="none" url="/pages/product/detail/detail?id={{vo.product_id}}">{{vo.getproduct.name}}</navigator>
+          <!-- <span style="float:right;" >删除</span> -->
+          <view class="dela" catchtap="del" id="{{vo.id}}" data-key="{{key}}">
+            <image src="{{globalData.static_domain}}del.png" mode="widthFix" />
+          </view>
+        </view>
+        <view class="state">{{vo.shuxing}}</view>
+        <view style="margin-top: 0.2rem;">
+          <text class="prize">￥{{vo.price}}</text>
+          <text class="fh" catchtap='jia' id='{{key}}'  style="float: right;">+</text>
+          <text type="number" class='fhh' style="float: right;">{{vo.number}}</text>
+          <text class="fh" catchtap='jian' id='{{key}}' style="float: right;">-</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+
+<view class="pay" style="z-index: 999;">
+  <button class="btnpay" catchtap="many_order">确认支付</button>
+  <view style='float:right;line-height:82.5rpx;'>
+    <text class="all" style='float:left;'>合计金额：</text>
+    <text class="mm" style='float:left;'>￥</text>
+    <text class="mm" id="total" style='float:left;'>{{total}}</text>
+    <text class="mm" style='float:left;'>元</text>
+  </view>
+  <view catchtap='itemSelected' id='-1'>
+    <text class="cirle oncirle" style="background: url({{quanxuan? globalData.static_domain+'ook.png':''}})no-repeat;background-size: 100% 100%;"></text>
+    <text style="line-height:82.5rpx;">全选</text>
+  </view>
+</view>
+
+<view wx:if="{{view.res == ''}}">
+<import src="../../templates/header/header.wxml"/>
+<template is="nothing"/>
+</view>

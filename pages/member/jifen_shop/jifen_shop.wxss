@@ -1,0 +1,143 @@
+.jf{
+	width: 100%;
+	height: 187.5rpx;
+	/* background: url(../images/jxx.png)no-repeat;
+	background-size: 100% 100%; */
+	position: relative;
+	overflow: hidden;
+}
+
+
+
+.jf .bta{
+	position: absolute;
+	left: 22.5rpx;
+	top: 22.5rpx;
+	color: white;
+	font-size: 30rpx;
+}
+
+.jf .cir{
+	width: 112.5rpx;
+	height:112.5rpx;
+	border: 1px solid #fff;
+	text-align: center;
+	line-height: 112.5rpx;
+	margin:52.5rpx auto;
+	border-radius: 50%;
+}
+
+.jf .cir view{
+	font-size: 37.5rpx;
+	color: white;
+}
+
+
+
+.actives_pro{
+	width: 100%;
+	overflow: hidden;
+	/* margin-left: 2.5%; */
+	/*margin-top: 0.5rem;*/
+}
+
+.actives_pro .oli{
+	width: 33.33%;
+	margin-bottom: 11.25rpx;
+	overflow: hidden;
+	border-radius: 10px;
+	/*background-color: white;*/
+	padding-bottom: 11.25rpx;
+}
+
+.actives_pro .oli navigator{
+	display: block;
+    font-size: 12rpx;
+    position: relative;
+    padding: 0 6.4%;
+}
+
+.actives_pro .oli:nth-child(even){
+	float: right;
+}
+
+.actives_pro .oli:nth-child(odd){
+	float: left;
+}
+
+.actives_pro .oli .proimgs{
+	width: 100%;
+	/*height: 11rem;*/
+	overflow: hidden;
+	margin-bottom: 11.25rpx;
+	position: relative;
+	border-radius: 10rpx;
+}
+
+.actives_pro .oli .proimgs image{
+	width: 100%;
+}
+
+.actives_pro .oli .procenter{
+	/* display: -webkit-box; */
+	/* -webkit-line-clamp: 2; */
+	/* -webkit-box-orient: vertical; */
+	overflow: hidden;
+	line-height: 18rpx;
+	/*height: 32px;*/
+	color: #000;
+	font-size: 26.25rpx;
+	text-align: justify;
+	height: 36rpx;
+	margin-bottom: 11.25rpx;
+}
+
+.actives_pro .oli .proprize{
+	width: 95%;
+	margin-left: 2.5%;
+	overflow: hidden;
+	/* height: 2.5rem; */
+}
+
+.actives_pro .oli .proprize .ppa{
+	/* display: block; */
+	font-family: arial;
+	font-size: 26.25rpx;
+	color: #ff5500;
+}
+
+.actives_pro .oli .proprize .ppa text{
+	color: #ff4e42;
+}
+
+.actives_pro .oli .proprize .moredo{
+	width: 60%;
+	float: right;
+	margin-right: 22.5rpx;
+	position: relative;
+}
+
+.actives_pro .oli .proprize .moredo .clicle{
+	font-size: 37.5rpx;
+	line-height: 11.25rpx;
+}
+
+.actives_pro .oli .procenter navigator{
+	font-size:27.75rpx;
+	/*font-weight:600;*/
+}
+
+.actives_pro .oli .proprize .moredo .howdo{
+	width: 90%;
+	height: 45rpx;
+	border-radius: 22.5rpx;
+	background-color: #878787;
+	display: none;
+	position: absolute;
+	left: 0;
+}
+
+.actives_pro .oli .proprize .moredo .howdo image{
+	width: 30rpx;
+	margin-top: 11.25rpx;
+}

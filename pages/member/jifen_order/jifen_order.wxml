@@ -1,0 +1,69 @@
+<view class="heads">
+  <block>
+    <view class="{{type == -1 ? 'ffa' : ''}}" catchtap="onchange" id='-1'>
+      <text>全部</text>
+    </view>
+  </block>
+  <block>
+    <view class="{{type == 1 ? 'ffa' : ''}}" catchtap="onchange" id='1'>
+      <text>待发货</text>
+    </view>
+  </block>
+  <block>
+    <view class="{{type == 2 ? 'ffa' : ''}}" catchtap="onchange" id='2'>
+      <text>待收货</text>
+    </view>
+  </block>
+  <block>
+    <view class="{{type == 3 ? 'ffa' : ''}}" catchtap="onchange" id='3'>
+      <text>已收货</text>
+    </view>
+  </block>
+</view>
+
+<view class="orders">
+  <block wx:for="{{view.res}}" wx:for-index="key" wx:for-item="vo">
+    <block wx:if="{{vo.showhide}}">
+      <view class="aa" wx:if="{{vo.showhide}}">
+        <view class="wlstate">订单状态：
+
+          <block wx:if="{{vo.status == 1}}">
+            <text>待发货</text>
+          </block>
+
+          <block wx:if="{{vo.status == 2}}">
+            <text>已发货</text>
+          </block>
+          <block wx:if="{{vo.status == 3}}">
+            <text>已收货</text>
+          </block>
+        </view>
+        <view class="single">
+          <view class="omg">
+            <image src="{{globalData.img_domain}}/{{vo.getproduct.img}}" mode="widthFix"></image>
+          </view>
+          <view class="inf">
+            <view class="nns">
+              <navigator hover-class="none" url='/pages/member/jfshop_detail/jfshop_detail?id={{vo.getproduct.id}}'>{{vo.getproduct.name}}</navigator>
+            </view>
+            <view class="prize">
+              <text class="sl">x{{vo.number}}</text>
+              <text class="hh">￥{{vo.total}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="how">
+          <block wx:if="{{vo.status == 2}}">
+            <navigator hover-class="none" url='/pages/member/wuliu/wuliu?id={{vo.id}}' class="pays">查看物流</navigator>
+            <navigator hover-class="none" id="{{vo.id}}" catchtap='shouhuo' class="pays">确认收货</navigator>
+          </block>
+        </view>
+      </view>
+    </block>
+  </block>
+</view>
+
+<view wx:if="{{view.res == ''}}">
+  <import src="../../templates/header/header.wxml" />
+  <template is="nothing" />
+</view>

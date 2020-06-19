@@ -1,0 +1,71 @@
+<view class="wrap">
+  <view style="width: 100%;text-align: center;margin: 0 auto;">
+    <image style="width: 150rpx;height: 150rpx;border-radius: 100%;" src="{{globalData.img_domain}}/{{member_card_list.getmember.img}}"></image>
+    <view>{{member_card_list.getmember.name}}</view>
+  </view>
+
+  <view class="card_content_Wrap">
+    <view class="card_content">
+      <text>名称</text>
+      <text>{{member_card_list.getcard.name}}</text>
+    </view>
+
+    <view class="card_content">
+      <text>卡号</text>
+      <text>{{member_card_list.card_number}}</text>
+    </view>
+
+    <view class="card_content">
+      <text>折扣</text>
+      <text>享{{member_card_list.getcard.zekou}}折优惠</text>
+    </view>
+
+    <view class="card_content">
+      <text>有效期至</text>
+      <text>{{member_card_list.expire_date}}</text>
+    </view>
+  </view>
+
+  <view class="hhh">
+    <view catchtap="changeType" id="0" style="{{type == 0 ? 'background-color:#00B26A;color:#fff;border-radius: 5px 0 0 5px' : ''}}">线下消费</view>
+    <view catchtap="changeType" id="1" style="{{type == 1 ? 'background-color:#00B26A;color:#fff;border-radius: 0 5px 5px 0' : ''}}">会员福利领取</view>
+  </view>
+  <view wx:if="{{type == 0}}" class="card_content_Wrap">
+    <view class="card_content">
+      <text>金额</text>
+      <input placeholder="请输入客户消费金额" type="number" value="{{money == 0 ? '' : money}}" bindinput="money" />
+    </view>
+    <view class="card_content">
+      <text>备注</text>
+      <input placeholder="请输入备注" value="{{summary}}" bindinput="summary" />
+    </view>
+    <view class="card_content">
+      <text>可获得积分</text>
+      <text style="width:60%;">{{jifen}}积分</text>
+    </view>
+    <view class="card_content">
+      <text>可获得返利</text>
+      <text style="width:60%;">{{fanli}}元</text>
+    </view>
+  </view>
+  <view wx:if="{{type == 0}}" catchtap="tijiao" style="width: 80%;height: 80rpx;background-color: #00B26A;margin: 40rpx auto;line-height: 80rpx;text-align: center;color: #fff;border-radius: 10rpx;font-size: 35rpx;">确 定</view>
+
+  <view wx:if="{{type == 1}}" class="card_content_Wrap" style="margin-bottom: 60rpx;">
+    <view class="card_content">
+      <text>请输入领取物品</text>
+      <input placeholder="请输入" value="{{fuli_summary}}" bindinput="fuli_summary" />
+    </view>
+    <view catchtap="fuli_tijiao" style="width: 80%;height: 80rpx;background-color: #00B26A;margin: 40rpx auto;line-height: 80rpx;text-align: center;color: #fff;border-radius: 10rpx;font-size: 35rpx;">确 定</view>
+    <view style="color:#666;">
+      <view style="font-size: 30rpx;line-height: 60rpx;">领取历史</view>
+      <block wx:for="{{member_card_fuli}}" wx:for-index="key" wx:for-item="vo">
+      <view style="border-bottom: 1px solid #e1e1e1;line-height: 46rpx;">
+        <view>店铺：{{vo.dianpu_name}}</view>
+        <view>扫码人：{{vo.saomaren}}</view>
+        <view>{{vo.fuli_summary}}</view>
+        <view>{{vo.date}}</view>
+      </view>
+      </block>
+    </view>
+  </view>
+</view>

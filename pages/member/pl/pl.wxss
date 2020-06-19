@@ -1,0 +1,186 @@
+.cp{
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 14.25rpx;
+	margin-bottom: 14.25rpx;
+	background-color: white;
+	height: 150rpx;
+	border-radius: 5rpx;
+}
+
+.cp .img_container{
+	width: 97.5rpx;
+	height: 97.5rpx;
+	border-radius: 4rpx;
+	text-align: center;
+	overflow: hidden;
+	float: left;
+	margin-top: 26.25rpx;
+	margin-left: 2.5%;
+	border: 1px solid #f2f2f2;
+}
+
+.cp .img_container image{
+	width: 80%;
+	margin-top: 10%;
+}
+
+.cp .omg_xx{
+	width: 75%;
+	float: right;
+	margin-right: 2.5%;
+	margin-top: 26.25rpx;
+}
+
+.cp .omg_xx p.nr{
+	font-size: 24rpx;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.cp .omg_xx p.nun text{
+	font-size: 24rpx;
+	color: #b2b2b2;
+	display: inline-block;
+	width: 45%;
+	margin-right: 2.5%;
+}
+
+.main{
+	width:90%;
+	margin: 18.75rpx auto ;
+	border-radius: 4rpx;
+  border: 1rpx solid #E5E5E5;
+}
+
+.publisher{
+	width: 97%;
+	padding-left: 1.5%;
+	overflow: hidden;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+.emoticons .publisher text{
+	float: left;
+	margin-top: 0.3rem;
+}
+
+.emoticons .publisher textarea{
+	margin-top: 0.3rem;
+	float: left;
+    width: 80%;
+    margin-left: 0.3rem;
+    height: 2.8rem;
+	resize: none;
+	line-height: 0.4rem;
+}
+
+.starpj{
+	width: 90%;
+	margin-left: 5%;
+	height: 79.5rpx;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.starpj text {
+    display: inline-block;
+    width: 20%;
+    float: left;
+    line-height: 79.5rpx;
+    margin-left: 11.25rpx;
+}
+
+.star-pos {margin:10rpx;display: flex;flex-direction: row;padding-top: 20rpx;}
+ 
+.stars{width: 40rpx;height: 40rpx;margin-left: 30rpx; }
+
+.bnts{
+	width: 95%;
+	height: 71.25rpx;
+	border-radius: 34.5rpx;
+	background-color: #ff5637;
+	margin-left: 2.5%;
+	overflow: hidden;
+	margin-top: 71.25rpx;
+}
+
+.bnts button{
+	width: 100%;
+	height: 100%;
+	background-color:#ff5637;
+	color: white;
+	border: none;outline: none;
+  font-size: 26.25rpx;
+}
+.weui-uploader {
+  width: 100%;
+  overflow: auto;
+  clear: both;
+}
+
+.z_photo {
+  width: 90%;
+  height: 187.5rpx;
+  overflow: auto;
+  margin: 0 auto;
+  clear: both;
+}
+
+.z_photo img {
+  width: 187.5rpx;
+}
+
+.weui-uploader__input-box {
+  float: left;
+  height: 90rpx;
+  overflow: hidden;
+  margin-right: 15rpx;
+  margin-left:1.5%; 
+  padding-bottom: 15rpx;
+}
+
+
+.weui-uploader__file{
+   width: 90rpx;
+  height: 90rpx;
+  float: left;
+  margin-right:15rpx;
+  overflow: hidden;
+}
+
+.weui-uploader__file image{
+  width: 100%;
+  height: 100%;
+}
+
+.js_file {
+  width: 90rpx;
+  height: 90rpx;
+  float: left;
+  margin-right:15rpx;
+  overflow: hidden;
+  
+}
+.weui-uploader__bd{
+  width: 100%;
+  overflow: hidden;
+}
+
+.z_file input::-webkit-file-upload-button {
+  width: 90rpx;
+  height:90rpx;
+  border: none;
+  position: absolute;
+  outline: 0;
+  opacity: 0;
+}
+
+.z_file input#file {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  vertical-align: middle;
+}

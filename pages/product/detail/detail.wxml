@@ -1,0 +1,260 @@
+<swiper indicator-dots="{{indicatorDots}}" style='height:748rpx;' autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{globalData.img_domain}}/compress/{{item.img}}" class="slide-image" style='width:100%'  mode="widthFix" />
+    </swiper-item>
+  </block>
+</swiper>
+
+
+<view class="pro_price">
+  <view class="nnb">
+    <text style="font-size: 18px;margin-top: 0.15rem;">￥</text>
+    <text style="margin-left: 0;margin-top: 0;">{{view.res.price}}</text>
+    <text class="yj" wx:if="{{view.res.old_price != 0}}" style="font-size:34rpx;color: #b0b0b0;text-decoration:line-through;margin-left:18.75rpx;">￥{{view.res.old_price}}</text>
+  </view>
+  <view class="nnc">
+    <view>
+      <text class="what" style="background-color: #f1362a;float: left;">官方</text>{{view.res.name}}
+    </view>
+  </view>
+  <view class="td">{{view.res.summary}}</view>
+  <view class="nnd">
+    <text>已售:{{view.res.sale_number}}件</text>
+    <view class='img_cont'>
+      <image src="{{soucang_img}}" catchtap="sc" mode='widthFix'></image>
+    </view>
+  </view>
+</view>
+
+<view style="width: 100%;height: 10px;background-color: #f5f5f5;"></view>
+
+<!-- 拼团列表开始 -->
+<view class="scrollbox" wx:if="{{view.pintuan_list != ''}}">
+  <view style="width: 100%;line-height: 75rpx;height:75rpx;">
+    <text style="float: left;line-height: 75rpx;margin-left: 11.25rpx;color: #000;font-size: 30rpx;">{{view.pintuan_number}}个人正在拼单</text>
+    <text class="loks" style="float: right;line-height: 75rpx;margin-right: 11.25rpx;color: #BCBBBB;font-size: 26.25rpx;">查看更多></text>
+  </view>
+  <swiper autoplay="true" interval="{{interval}}" duration="{{duration}}" vertical="true" style="width:100%;height:225rpx;" display-multiple-items="{{view.pintuan_number > 1 ? 2 : 1}}">
+    <block wx:for="{{view.pintuan_list}}" wx:for-item="vo">
+      <swiper-item indicator-dots="false">
+        <view class="phot">
+          <image src="{{globalData.img_domain}}/{{vo.getmember1.img}}" mode='widthFix'></image>
+        </view>
+        <text class="name">{{vo.getmember1.name}}</text>
+        <text class="gos" catchtap='pintuan' data-condition='{{view.res.condition}}' data-tuanzhang_id='{{vo.id}}' data-number='{{vo.dai_pintuan_number}}' data-time='{{vo.shengyu_time}}' data-name='{{vo.getmember1.name}}' data-img='{{vo.getmember1.img}}'>去拼单</text>
+        <view class="save">
+          <view style="margin-top: 23.25rpx;">还差
+            <text>{{vo.dai_pintuan_number}}人</text>拼成</view>
+          <view>剩余{{vo.shengyu_time}}</view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- 拼团列表结束 -->
+
+<view class="chooses" style="border: none;">
+  <block wx:if="{{view.res.p_canshu}}">
+    <view class="one csa" catchtap="canshu">
+      <view class="zd">
+        <text class="aa">{{view.res.p_canshu[0].name}}</text>
+        <text class="bb">{{view.res.p_canshu[0].content}}</text>
+        <image src="{{globalData.static_domain}}jt.png" class="jt" mode='widthFix' />
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{view.res.p_fuwu}}">
+    <view class="one fwa" id="d" bindtap='clickService' catchtap="fuwu">
+      <view class="zd">
+        <text class="aa">{{view.res.p_fuwu[0].name}}</text>
+        <text class="bb">{{view.res.p_fuwu[0].content}}</text>
+        <image src="{{globalData.static_domain}}jt.png" class="jt" mode='widthFix' />
+      </view>
+    </view>
+  </block>
+</view>
+
+<view class="tomore" id="b" wx:if="{{view.good_pinglun_number}}">
+  <text class="ospan" style="border: none;">宝贝评价({{view.pinglun_number}})</text>
+  <navigator hover-class="none" class="mmb" url="/pages/product/pingjia/pingjia?id={{view.res.id}}">
+    查看全部
+    <image src="{{globalData.static_domain}}rjt.png" mode="widthFix" style="width:11.25rpx;height:11.25rpx;" />
+  </navigator>
+</view>
+<view class="proshow" id="c" wx:if="{{view.good_pinglun_number}}">
+  <view class="type">
+    <navigator hover-class="none" url='/pages/product/pingjia/pingjia?id={{view.res.id}}&type=4'>好评({{view.good_pinglun_number}})</navigator>
+    <navigator hover-class="none" url='/pages/product/pingjia/pingjia?id={{view.res.id}}&type=5'>中评({{view.zhong_pinglun_number}})</navigator>
+    <navigator hover-class="none" url='/pages/product/pingjia/pingjia?id={{view.res.id}}&type=6'>差评({{view.cha_pinglun_number}})</navigator>
+  </view>
+  <view class="zz">
+    <view>
+      <image src="{{globalData.img_domain}}/{{view.pinglun.getmember.img}}" mode="widthFix" />
+    </view>
+  </view>
+  <view class="names">{{view.pinglun.getmember.name}}
+    <!--<img src="__STATIC__/{$pinglun.getmember.grade}" style="width:1.5rem;margin-left: 0.15rem;"/>-->
+  </view>
+  <view class="plb">
+    <view class='op'>{{view.pinglun.summary}}</view>
+  </view>
+</view>
+<view style="width: 95%;border-top: 1px solid #f8f8f8;margin-left: 2.5%;"></view>
+<view class="lesson" id="e">
+  <view class="lla" style="width: 100%;margin: 0 auto;background-color: #f8f8f8;height: 75rpx;padding-top: 0;line-height: 75rpx;text-align:center;">
+    <text>产品详情</text>
+  </view>
+  <view class="nr">
+    <view class="lessjj">
+      <rich-text nodes="{{view.res.content}}"></rich-text>
+    </view>
+  </view>
+</view>
+
+<!-- 购买页面 -->
+<view class="prodetail_mask" wx:if="{{hiddenName}}">
+  <view class="choose_add bzb" wx:if="{{goumaiHidden}}">
+    <view class="prosa" id="pintuan" wx:if="{{pintuan}}">
+      <view class="imga" style="box-shadow: none;width: 1.2rem;height: 1.2rem;">
+        <image id="tuanzhang_img" src="{{globalData.img_domain}}/{{pintuan.img}}" style="border-radius:50%;width: 75rpx;height: 75rpx;margin:auto 7.5rpx;" />
+      </view>
+      <view class="xx" style='margin-left:65rpx;'>
+        <view class="pri" id="pintuanren" style="color:#000;">参与 {{pintuan.name}} 的拼团</view>
+        <view id="pintuan_shengyu_number">再有 {{pintuan.number}} 个名额拼成</view>
+      </view>
+    </view>
+
+    <image src="{{globalData.static_domain}}guanbi.png" class="off" mode="widthFix" bindtap='clickOff' />
+    <view class="prosa">
+      <view class="imga">
+        <image src="{{globalData.img_domain}}/compress/{{view.res.img}}" mode="widthFix" />
+      </view>
+      <view class="xx" style="width:70%;">
+        <view class="pri">
+          <text>￥</text>
+          <text id="ggprice">{{shuxingmingshuxingzhi_result.price}}</text>
+        </view>
+        <view>{{shuxingmingshuxingzhi_result.mingzhi_name}}</view>
+      </view>
+    </view>
+
+    <block wx:for="{{view.res.getshuxingming}}" wx:for-item="vo">
+      <view class="cpfl">
+        <view>{{vo.name}}</view>
+        <view>
+          <block wx:for="{{vo.getshuxingzhi}}" wx:for-item="vv">
+            <text class="{{shuxingming[vo.id] == vv.id ? 'foc' : ''}}" catchtap="shuxingzhi" data-shuxingzhi_id='{{vv.id}}' data-shuxingming_id='{{vo.id}}'>{{vv.name}}</text>
+          </block>
+        </view>
+      </view>
+    </block>
+
+    <view class="buynun">
+      <text class="osp">购买数量</text>
+      <view class="nuns">
+        <text class="jian" catchtap='jian' id="jian">-</text>
+        <text>{{number}}</text>
+        <text class="jia" id="jia" catchtap='jia'>+</text>
+      </view>
+    </view>
+
+    <view class="addcars" style="border: none;">
+      <view class="howa" style="width: 80%;margin-left: 10%;">
+        <view style="background-color: #fead21;" catchtap='gwc'>加入购物车</view>
+        <view style="background-color: #ff5933;" catchtap='buy'>立即购买</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="choose_add csb" wx:if="{{canshuHidden}}">
+    <image src="{{globalData.static_domain}}guanbi.png" mode="widthFix" class="off" bindtap='clickOff' />
+    <view class="tit">产品参数</view>
+    <view class="canshu">
+      <block wx:for="{{view.res.p_canshu}}" wx:for-item="vo">
+        <view>
+          <view class="ser">{{vo.name}}</view>
+          <view class="do">{{vo.content}}</view>
+        </view>
+      </block>
+
+    </view>
+
+    <view class="oka" bindtap='clickOff'>完成</view>
+  </view>
+
+  <view class="choose_add fwb" wx:if="{{fuwuHidden}}">
+    <image src="{{globalData.static_domain}}guanbi.png" mode="widthFix" class="off" bindtap='clickOff' />
+    <view class="tit">产品服务</view>
+    <view class="canshu">
+      <block wx:for="{{view.res.p_fuwu}}" wx:for-item="vo">
+        <view>
+          <view class="ser">{{vo.name}}</view>
+          <view class="do">{{vo.content}}</view>
+        </view>
+      </block>
+    </view>
+    <view class="oka" bindtap='clickOff'>完成</view>
+  </view>
+</view>
+<view style="width:100%;height:150rpx;"></view>
+<view class="addcar" style="border: none;">
+  <view class="link">
+    <view class="kf">
+      <navigator hover-class="none" catchtap='jump1'>
+        <view>
+          <image src="{{globalData.static_domain}}shangcheng.png" mode="widthFix" />
+        </view>
+        <view>商城</view>
+      </navigator>
+    </view>
+
+    <view class="kf">
+      <view style="margin-top: 0.02rem;">
+        <image catchtap="phonecallevent" src="{{globalData.static_domain}}kefu.png" mode="widthFix" style="45rpx" />
+      </view>
+      <button open-type='contact' send-message-title="{{view.res.name}}" send-message-img="{{globalData.img_domain}}/compress/{{view.res.img}}" send-message-path="/pages/product/detail/detail?id={{view.res.id}}" bindcontact='contact' show-message-card plain>客服</button>
+    </view>
+
+    <view class="kf">
+      <navigator hover-class="none" catchtap='jump'>
+        <view>
+          <image src="{{globalData.static_domain}}gouwuche.png" mode="widthFix" />
+          <text class="nan">{{view.gwc_number}}</text>
+        </view>
+        <view>购物车</view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="howa">
+    <block wx:if="{{view.res.condition != 2}}">
+      <view style="background:linear-gradient(to right,#fec301,#fab000,#fd9800);" data-condition='{{view.res.condition}}' catchtap="single_order">加入购物车</view>
+    </block>
+    <block wx:else>
+      <view style="background:linear-gradient(to right,#fec301,#fab000,#fd9800);" data-condition='0' catchtap="single_order">单独购买</view>
+    </block>
+
+    <block wx:if="{{view.res.condition != 2}}">
+      <view style="background:linear-gradient(to right,#ff7001,#fd5e01,#ff4c01);" data-condition='{{view.res.condition}}' catchtap="single_order">立即购买</view>
+    </block>
+    <block wx:else>
+      <view style="background:linear-gradient(to right,#ff7001,#fd5e01,#ff4c01);" data-condition='{{view.res.condition}}' catchtap="single_order">发起拼单</view>
+    </block>
+  </view>
+</view>
+
+<view style="width:37.5rpx;overflow: hidden;position: fixed;right: 0;top: 48%;border: 1px solid #e1e1e1;border-radius: 5px;text-align: center;background-color: white;">
+    <navigator hover-class="none" url="/pages/member/youhuiquan_center/youhuiquan_center"><text style="font-size: 22.5rpx;">优惠券</text></navigator>
+</view>
+
+<button open-type="share" style="width:180rpx;overflow: hidden;position: fixed;right: 0;top: 10%;border: 1px solid #e1e1e1;border-radius: 5px;text-align: center;font-size:22.5rpx;background-color:#ff5933;color:#fff;">推荐给好友</button>
+
+<image src="/pages/images/pyq.png" catchtap="hbewm" style="position: fixed;left: 10rpx;top: 11%;width: 50rpx;height: 50rpx;" />
+
+<canvas wx:if="{{hidden}}" class="canvas" style="width:{{widthN}}px; height: 446px;" canvas-id="firstCanvas"></canvas>
+<image wx:if="{{hidden}}" src="{{img_path}}" class="canvas"  style="width:{{widthN}}px; height: 446px;"></image>
+<view wx:if="{{hidden}}" class="zhezhao_wrap" catchtap="quxiao"></view>
+<view wx:if="{{hidden}}" class="canvasBut" bindtap='saveImg'>
+  <view class="canvasbut_Wrap">保存到手机相册</view>
+</view>

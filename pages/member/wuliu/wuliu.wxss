@@ -1,0 +1,97 @@
+/* pages/wuliu/wuliu.wxss */
+.states{
+	width: 100%;
+	background: -webkit-linear-gradient(left, #fd952f , #f2703b); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #fd952f , #f2703b); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #fd952f , #f2703b); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #fd952f , #f2703b); /* 标准的语法 */
+	overflow: hidden;
+	padding-bottom:200rpx;
+  padding-top: 20rpx;
+}
+
+.states view{
+	color: white;
+	width: 90%;
+	margin-left: 5%;
+}
+
+.lc{
+	width: 90%;
+	margin-left: 5%;
+	overflow: hidden;
+	margin-top: -150rpx;
+	background-color: white;
+	border-radius: 5px;
+	border: 1px solid #E5E5E5;
+}
+
+.lc .one{
+	width: 100%;
+	overflow: hidden;
+	/* padding: 37.5rpx 0; */
+}
+
+.lc .one .ll{
+	width: 5%;
+	float: left;
+	position: relative;
+	height: 100%;
+}
+
+.lc .one .rr{
+	width: 85%;
+	margin-right: 5%;
+	float: right;
+	border-bottom: 1px solid #e5e5e5;
+	padding: 37.5rpx 0 ;
+}
+
+.lc .one .ll>view{
+	height: 375rpx;
+	border-left: 1px solid #d9d9d9;
+	position: absolute;
+	right: 0.5rpx;
+	top: -37.5rpx;
+}
+
+.lc .one .ll>text{
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #d9d9d9;
+	position: absolute;
+	right: -7.5rpx;
+}
+
+.foc .circle{
+	background-color: #ff4e42 !important;
+}
+
+.lc .foc .ll>div{
+	height: 300rpx;
+	top: 36rpx;
+}
+
+.lc .foc{
+	color: #ff4e42;
+}
+
+.lc .one .rr .inforr a{
+	color: #6eaee1;
+	text-decoration: underline;
+}
+
+.lc .one .rr view{
+	width: 90%;
+}
+
+
+.lc .one .rr .time{
+	margin-top: 22.5rpx;
+}
+
+.lc .one:last-child .rr{
+	border: none;
+}

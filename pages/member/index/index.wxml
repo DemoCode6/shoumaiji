@@ -1,0 +1,295 @@
+<view class='containers'>
+  <view class="me">
+    <view class="micons">
+      <view class="onea">
+        <view>
+          <image src="{{globalData.static_domain}}m1.png" mode="widthFix"></image>
+        </view>
+        <text class="oac">分享内容</text>
+      </view>
+      <view class="jt">
+        >
+      </view>
+      <view class="onea">
+        <view>
+          <image src="{{globalData.static_domain}}m2.png" mode="widthFix"></image>
+        </view>
+        <text class="oac">好友关注</text>
+      </view>
+      <view class="jt">
+        >
+      </view>
+      <view class="onea">
+        <view>
+          <image src="{{globalData.static_domain}}m3.png" mode="widthFix"></image>
+        </view>
+        <text class="oac">产生交易</text>
+      </view>
+      <view class="jt">
+        >
+      </view>
+      <view class="onea">
+        <view>
+          <image src="{{globalData.static_domain}}m4.png" mode="widthFix"></image>
+        </view>
+        <text class="oac">获得收益</text>
+      </view>
+    </view>
+  </view>
+  <view class="personal">
+  <image src="/pages/images/qd.png" class="qdBut" catchtap="qiandao"></image>
+    <navigator hover-class="none" url='/pages/member/member/member' class="topme">
+      <view class="picture">
+        <image src="{{globalData.img_domain}}/{{view.user_msg.img}}" class="picta"></image>
+      </view>
+      <view class="namem" >
+        <text class="namee">{{view.user_msg.name}}</text>
+        <view class="get" wx:if="{{view.user_msg.zekou != 100}}">
+          <text class="ng">{{view.user_msg.getmembergrade.name}}享{{view.user_msg.zekou}}折优惠</text>
+        </view>
+      </view>
+    </navigator>
+    <navigator hover-class="none" url='/pages/member/address/address' class="lis" style='position:relative;'>
+      <text class="nan">地址管理</text>
+      <image src="../../images/rr.png" mode="widthFix" class="toright"></image>
+    </navigator>
+  </view>
+</view>
+
+
+<view class="order">
+  <view class="order_cont">
+    <view class='myorders'>
+      <text class="my">我的订单</text>
+      <text class="whole">查看全部订单></text>
+    </view>
+    <view class="ouls">
+      <navigator hover-class="none" class='olis' url="/pages/member/orderlist/orderlist?id=0">
+        <view class="icon">
+          <image src="{{globalData.static_domain}}b.png" mode="widthFix"></image>
+          <text class="nan">{{view.dfk_number}}</text>
+        </view>
+        <view class='op'>待付款</view>
+      </navigator>
+      <navigator hover-class="none" class='olis' url="/pages/member/orderlist/orderlist?id=1">
+        <view class="icon">
+          <image src="{{globalData.static_domain}}c.png" mode="widthFix"></image>
+          <text class="nan">{{view.dfh_number}}</text>
+        </view>
+        <view class='op'>待发货</view>
+      </navigator>
+      <navigator hover-class="none" class='olis' url="/pages/member/orderlist/orderlist?id=2">
+        <view class="icon">
+          <image src="{{globalData.static_domain}}d.png" mode="widthFix"></image>
+          <text class="nan">{{view.dsh_number}}</text>
+        </view>
+        <view class='op'>待收货</view>
+      </navigator>
+      <navigator hover-class="none" class='olis' url="/pages/member/orderlist/orderlist?id=3">
+        <view class="icon">
+          <image src="{{globalData.static_domain}}e.png" mode="widthFix"></image>
+          <text class="nan">{{view.dpj_number}}</text>
+        </view>
+        <view class='op'>待评价</view>
+      </navigator>
+      <navigator hover-class="none" class='olis' url="/pages/member/orderlist/orderlist?id=4">
+        <view class="icon">
+          <image src="../../images/f.png" mode="widthFix"></image>
+          <text class="nan">{{view.ypj_number}}</text>
+        </view>
+        <view class='op'>已评价</view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+<!-- <navigator hover-class="none" url="/pages/member/huiyuan/huiyuan">
+  <image src="{{globalData.img_domain}}/{{view.gsxx.huiyuan_img}}" mode="widthFix" style='width:100%;' />
+</navigator> -->
+
+<view class="order" wx:if="{{globalData.user_msg.is_fenxiao == 0}}">
+  <view class="order_cont">
+    <view class='myorders'>
+      <text class="my">分销中心</text>
+    </view>
+
+
+    <view class="oulb" style='padding-bottom:15rpx;'>
+      <view class='olis' style='width:33.33%'>
+        <navigator hover-class="none" url="/pages/member/code/code">
+          <view class="icon">
+            <image src="../../images/code.png" mode="widthFix"></image>
+          </view>
+          <view style='margin-bottom:5rpx'>二维码</view>
+          <view>名片</view>
+        </navigator>
+      </view>
+      <view class='olis' style='width:33.33%'>
+        <navigator hover-class="none" href="">
+          <view class="icon">
+            <image src="../../images/lj.png" mode="widthFix"></image>
+          </view>
+          <view style='margin-bottom:5rpx'>￥{{view.leiji_total}}</view>
+          <view>累计交额</view>
+        </navigator>
+      </view>
+      <view class='olis' style='width:33.33%'>
+        <navigator hover-class="none" href="">
+          <view class="icon">
+            <image src="../../images/ljsy.png" mode="widthFix"></image>
+          </view>
+          <view style='margin-bottom:5rpx'>￥{{view.leiji_shouyi}}</view>
+          <view>累计收益</view>
+        </navigator>
+      </view>
+    </view>
+    <view class="oulb">
+      <view class='olis' style='width:33.33%'>
+        <navigator hover-class="none" url="/pages/member/kehu/kehu">
+          <view class="icon">
+            <image src="../../images/khgx.png" mode="widthFix"></image>
+          </view>
+          <view style='margin-bottom:5rpx'>{{view.yaoqing_number}}</view>
+          <view>客户中心</view>
+        </navigator>
+      </view>
+      <view class='olis' style='width:33.33%'>
+        <navigator hover-class="none" url="/pages/member/dai_shouyi/dai_shouyi">
+          <view class="icon">
+            <image src="../../images/djs.png" mode="widthFix"></image>
+          </view>
+          <view style='margin-bottom:5rpx'>￥{{view.dai_money}}</view>
+          <view>待结算</view>
+        </navigator>
+      </view>
+      <view class='olis' style='width:33.33%'>
+        <navigator hover-class="none" url="/pages/member/cj_order/cj_order">
+          <view class="icon">
+            <image src="../../images/yjs.png" mode="widthFix"></image>
+          </view>
+          <view style='margin-bottom:5rpx'>￥{{view.yjs_money}}</view>
+          <view>已结算</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="order">
+  <view class="order_cont">
+    <view class='myorders'>
+      <text class="my">积分中心</text>
+    </view>
+
+    <view class="oulb">
+      <view class='olis' style='width:33.33%'>
+        <navigator hover-class="none" url="/pages/member/jifen/jifen">
+          <view class="icon">
+            <image src="../../images/wdjf.png" mode="widthFix"></image>
+          </view>
+          <view>我的积分</view>
+        </navigator>
+      </view>
+      <view class='olis' style='width:33.33%'>
+        <navigator hover-class="none" url="/pages/member/jifen_shop/jifen_shop">
+          <view class="icon">
+            <image src="../../images/jfsc.png" mode="widthFix"></image>
+          </view>
+          <view>积分商城</view>
+        </navigator>
+      </view>
+      <view class='olis' style='width:33.33%'>
+        <navigator hover-class="none" url="/pages/member/jifen_order/jifen_order">
+          <view class="icon">
+            <image src="../../images/jfdd.png" mode="widthFix"></image>
+          </view>
+          <view>积分订单</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="order">
+  <view class="order_cont">
+    <view class='myorders'>
+      <text class="my">账户中心</text>  
+    </view>
+    <view class="oulb">
+      <view class='olis' style='width:33.33%'>
+        <navigator hover-class="none" url="/pages/member/tixian_record/tixian_record">
+          <view class="icon">
+            <image src="../../images/tixian.png" mode="widthFix"></image>
+          </view>
+          <view style='margin-bottom:5rpx'>￥{{view.user_msg.account}}</view>
+          <view>可提现</view>
+        </navigator>
+      </view>
+      <view class='olis' style='width:33.33%'>
+        <navigator hover-class="none" url="/pages/member/chongzhi/chongzhi">
+          <view class="icon">
+            <image src="../../images/cz.png" mode="widthFix"></image>
+          </view>
+          <view style='margin-bottom:5rpx'></view>
+          <view>充值</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="order">
+  <view class="order_cont">
+    <view class='myorders'>
+      <text class="my">优惠券</text>  
+    </view>
+    <view class="oulb">
+      <view class='olis' style='width:33.33%'>
+        <navigator hover-class="none" url="/pages/member/youhuiquan/youhuiquan">
+          <view class="icon">
+            <image src="../../images/wdyhq.png" mode="widthFix"></image>
+          </view>
+          <view>我的优惠券</view>
+        </navigator>
+      </view>
+      <view class='olis' style='width:33.33%'>
+        <navigator hover-class="none" url="/pages/member/youhuiquan_center/youhuiquan_center">
+          <view class="icon">
+            <image src="../../images/yhqc.png" mode="widthFix"></image>
+          </view>
+          <view>优惠券中心</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="order">
+  <view class="order_cont">
+    <view class='myorders'>
+      <text class="my">我的产品</text>  
+    </view>
+    <view class="oulb">
+      <view class='olis' style='width:33.33%'>
+        <navigator hover-class="none" url="/pages/member/product_liulan/product_liulan">
+          <view class="icon">
+            <image src="../../images/wdll.png" mode="widthFix"></image>
+          </view>
+          <view>我的浏览</view> 
+        </navigator>
+      </view>
+      <view class='olis' style='width:33.33%'>
+        <navigator hover-class="none" url="/pages/member/product_shoucang/product_shoucang">
+          <view class="icon">
+            <image src="../../images/wdsc.png" mode="widthFix"></image>
+          </view>
+          <view>我的收藏</view>
+        </navigator>
+      </view>
+      <view class='olis' style='width:33.33%'>
+        <navigator hover-class="none" url="/pages/member/product_buy/product_buy">
+          <view class="icon">
+            <image src="../../images/ygm.png" mode="widthFix"></image>
+          </view>
+          <view>已购买</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

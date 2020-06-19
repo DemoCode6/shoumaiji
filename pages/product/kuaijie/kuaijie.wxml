@@ -1,0 +1,167 @@
+<!--pages/goodslist/goodslist.wxml-->
+<view class="list_top">
+  <view class="list">
+    <block wx:for="{{yiji}}" wx:for-index="key" wx:for-item="vo">
+      <view class=" list1 list11 {{current_yiji_product_id == vo.id ? 'add_citying':'add_city'}}" data-num="{{vo.id}}" bindtap="clickNum">{{vo.name}}</view>
+    </block>
+  </view>
+  <view class="iconfont icon-xiajiantou123 {{bool?'icon-xiajiantou':'icon-shangjiantou'}}" bindtap="clickjiantou"></view>
+</view>
+
+<view class="sort_all sort_allzin" hidden="{{hiddenName}}">
+  <view class="sort_all1">全部分类</view>
+  <view class="sort_all2">
+    <block wx:for="{{yiji}}" wx:for-index="key" wx:for-item="vo">
+      <view class="sost_list {{current_yiji_product_id == vo.id ?'add_sorting':'add_sort'}}" data-num="{{vo.id}}" bindtap="clickNum">{{vo.name}}</view>
+    </block>
+  </view>
+</view>
+<!-- 侧边导航栏一级 -->
+<view class="kinds-level2">
+  <view class="nav2-list">
+    <block wx:for="{{erji}}" wx:for-index="key" wx:for-item="vo">
+      <view class="nav2-list1 {{current_erji_product_id == vo.id ? 'add_naving':'add_nav'}}" data-nav="{{vo.id}}" bindtap="clicknav">{{vo.name}}</view>
+    </block>
+  </view>
+</view>
+<!-- 侧边导航栏二级 -->
+<view class="sort_all condition-container">
+  <view class="sort_all2 sort_all22323">
+    <view catchtap="click_sanji" class="sost_list {{current_sanji_product_id == 0 ? 'add_sorting':'add_sort'}}" data-sost="0">全部</view>
+    <block wx:for="{{sanji}}" wx:for-index="key" wx:for-item="vo">
+      <view catchtap="click_sanji" class="sost_list {{current_sanji_product_id == vo.id ? 'add_sorting':'add_sort'}}" data-sost="{{vo.id}}">{{vo.name}}</view>
+    </block>
+  </view>
+  <!-- 商品列表 -->
+  <scroll-view class="goods_list_scroll" scroll-y="true" bindscrolltolower='scrollToLower' lower-threshold='90'>
+    <view class="goods_list">
+      <block wx:for="{{arr}}" wx:for-index="key" wx:for-item="vo">
+        <view class="goods_list1">
+          <view catchtap="jump_detail" id="{{vo.id}}" class="goods_img goods_flo">
+            <image src="{{globalData.img_domain}}/compress/{{vo.img}}" mode="aspectFit"></image>
+          </view>
+          <view class="goods_flo goods_flo1">
+            <view catchtap="jump_detail" id="{{vo.id}}" class="shengluehao">{{ vo.name }}</view>
+            <view catchtap="jump_detail" id="{{vo.id}}" class="xiaoliang">销量 {{ vo.sale_number }}</view>
+            <view class="price_operation">
+              <view class="price">￥{{ vo.price }}</view>
+              <!-- 弹出按钮 -->
+              <view class="operation" wx:if="{{ vo.product_type == 'many' }}">
+                <text class="iconfont icon-tianjia" bindtap="showModel" id="{{ vo.id }}"></text>
+              </view>
+              <!-- 弹出按钮 -->
+
+              <!-- 加减按钮 -->
+              <view class="operation" wx:if="{{ vo.product_type == 'single' }}">
+                <text class="iconfont icon-iconset0187" bindtap="jian" data-index="{{ key }}" wx:if="{{ vo.number > 0 }}" id="{{vo.id}}"></text>
+                <text class="operation_num" wx:if="{{ vo.number > 0 }}">{{ vo.number }}</text>
+                <text class="iconfont icon-tianjia" bindtap="jia" data-index="{{ key }}"></text>
+              </view>
+              <!-- 加减按钮 -->
+            </view>
+          </view>
+        </view>
+      </block>
+      <view style="text-align:center;color:#999;" wx:if="{{daodile}}">到底了~</view>
+    </view>
+    
+  </scroll-view>
+
+</view>
+
+<!-- 底部 -->
+<!-- wx:if="{{ totalCount > 0 }}"显示圆圈 -->
+<view class="footer_list">
+  <view class="footer_car footer_car_active" bindtap="showModal" wx:if="{{ totalCount > 0 }}">
+    <image src="../../images/list_car.png"></image>
+    <view class="yunaquan">{{ totalCount }}</view>
+  </view>
+  <view class="footer_car" bindtap="showModal" wx:if="{{ totalCount < 1 }}">
+    <image src="../../images/list_car1.png"></image>
+  </view>
+  <view class="footer_car1">
+    <view>￥{{ totalPrice }}</view>
+    <view>{{dingdan_arr.length ? '优惠信息请至结算页面查看' : '当前购物车为空'}}</view>
+  </view>
+  <view class="jiesuan" catchtap="jiesuan">去结算</view>
+</view>
+<!-- 从底部弹出选择框 -->
+<view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
+  <view class="modals-cancel" bindtap="hideModal"></view>
+  <view class="bottom-dialog-body bottom-pos" animation="{{animationData}}">
+    <!-- 框的内容 -->
+    <view class="car_tan_top_title">
+      <view class="car_left">
+        <text>购物车</text>
+      </view>
+      <view class="car_right" catchtap="qingkong">
+        <text class="iconfont icon-lajitong"></text>
+        <text>清空</text>
+      </view>
+    </view>
+    <view class="car_shop_w">
+      <!-- goodsmain_list -->
+      <block wx:for="{{dingdan_arr}}" wx:for-index="key" wx:for-item="vo">
+        <view>
+          <view class="car_shop" wx:if="{{ vo.number > 0}}">
+            <view class="car_shop_left" catchtap="showname" data-name="{{ vo.name }}({{vo.product_shuxingming_shuxingzhi.mingzhi_name}})">{{ vo.name }}({{vo.product_shuxingming_shuxingzhi.mingzhi_name}})</view>
+            <view class="car_shop_middle">￥{{ vo.total }}</view>
+            <view class="operation car_shop_right">
+              <text class="iconfont icon-iconset0187" bindtap="gwc_jian" data-index="{{ key }}" wx:if="{{ vo.number>0 }}"></text>
+              <text class="operation_num" wx:if="{{ vo.number > 0 }}">{{ vo.number }}</text>
+              <text class="iconfont icon-tianjia" bindtap="gwc_jia" data-index="{{ key }}"></text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="car_tip">Tip:加入购物车后请尽快下单哦~</view>
+  </view>
+</view>
+<!-- 购物车_从底部弹出选择框-->
+<!-- 渐深的背景层 -->
+<view class='{{bg}} bgbg' style="visibility:{{backgroundVisible ? 'visible':'hidden'}}"></view>
+<!-- 底部弹出层 -->
+<view class="element-wrapper" animation="{{animation}}" style="visibility:{{show ? 'visible':'hidden'}}">
+  <view class="element">
+    <!-- 规格 -->
+    <view class="spec_shop_pic">
+      <image src="{{globalData.img_domain}}/compress/{{current_product_duoshuxing.res.img}}" class="spec_pic_shop"></image>
+      <view class="spec_price_w">
+        <view>{{current_product_duoshuxing.res.name}}</view>
+        <view>￥{{current_product_duoshuxing.price}}</view>
+        <view>{{current_product_duoshuxing.getprice_by_shuxingzhi ? '规格:' + current_product_duoshuxing.getprice_by_shuxingzhi.mingzhi_name : '请选择规格'}}</view>
+      </view>
+      <!-- bindtap="hideModal" -->
+      <view class="iconfont icon-shanchu" catchtap="hidden"></view>
+    </view>
+    <!-- 选择 -->
+    <view class="choose_content">
+      <block wx:for="{{current_product_duoshuxing.res.getshuxingming}}" wx:for-index="key" wx:for-item="vo">
+        <view class="choose_clear">
+          <view class="jine">{{vo.name}}</view>
+          <view class="choose_main">
+            <block wx:for="{{vo.getshuxingzhi}}" wx:for-index="kk" wx:for-item="vv">
+              <view class="{{vv.check ? 'foc': ''}}" catchtap="choose_shuxing" data-shuxingming_key="{{key}}" data-shuxingzhi_key="{{kk}}" id="{{vv.id}}">{{vv.name}}</view>
+            </block>
+          </view>
+        </view>
+      </block>
+    </view>
+    <!-- 数量 -->
+    <view class="spec_num_w">
+      <text class="spec_num_w1">数量</text>
+      <view class="stepper">
+        <!-- 减号 -->
+        <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+        <!-- 数值 -->
+        <input type="number" bindchange="bindManual" value="{{nums}}" />
+        <!-- 加号 -->
+        <text class="normal" bindtap="bindPlus">+</text>
+      </view>
+    </view>
+
+    <!-- 确定 -->
+    <view class="spec_submit" catchtap="duoguige_submit">确定</view>
+  </view>
+</view>

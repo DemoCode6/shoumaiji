@@ -1,0 +1,6 @@
+<view class="changg">
+  <input type="text" value='{{value}}' bindinput="summary"></input>
+</view>
+<view class="bnts">
+  <button catchtap='edit_user'>确定</button>
+</view>

@@ -1,0 +1,254 @@
+.orders {
+    border: 1px solid #f0f3f5;
+    border-radius: 5px;
+    width: 95%;
+    margin-left: 2.5%;
+    overflow: hidden;
+    margin: 11.25rpx auto;
+    box-shadow: 0 0 2px 2px #f0f3f5;
+    background-color: white;
+}
+.orders .aa {
+    border: none;
+}
+.orders .aa {
+    width: 98%;
+    overflow: hidden;
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+    padding: 9.75rpx 0;
+    margin: 11.25rpx auto;
+}
+.abig {
+    width: 100%;
+    overflow: hidden;
+}
+.body{background-color: #f5f8fa;}
+.states{
+	width: 100%;
+	background: -webkit-linear-gradient(left, #fd952f , #f2703b); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #fd952f , #f2703b); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #fd952f , #f2703b); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #fd952f , #f2703b); /* 标准的语法 */
+	overflow: hidden;
+	padding-bottom: 60rpx;
+}
+
+.states p{
+	color: white;
+	width: 90%;
+	margin-left: 5%;
+}
+
+.getpeop{
+	width: 95%;
+	margin-left: 2.5%;
+	overflow: hidden;
+	background-color: white;
+	border-radius: 5px;
+	margin-top: -30rpx;
+	padding: 18.75rpx 0;
+	border: 1px solid #f0f3f5;
+	box-shadow: 0 0 2px 2px #f0f3f5;
+}
+
+.getpeop p{
+	width: 90%;
+	margin-left: 5%;
+	line-height: 37.5rpx;
+}
+
+.orders{
+	width: 95%;
+	overflow: hidden;
+	margin: 11.25rpx auto;
+	box-shadow: 0 0 2px 2px #f0f3f5;
+	background-color: white;
+}
+
+.orders .det{
+	width: 95%;
+    margin-left: 2.5%;
+    margin-bottom: 37.5rpx;
+    margin-top: 15rpx;
+}
+
+.orders .det p{
+	color: #b9b9b9;
+	line-height: 41.25rpx;
+}
+
+.orders .aa .ospan span {
+    color: #b9b9b9;
+    margin-right: 37.5rpx;
+}
+.orders .aa{
+	width: 98%;
+	overflow: hidden;
+	border: 1px solid #E5E5E5;
+	border-radius: 5px;
+	padding: 9.75rpx 0;
+	margin: 11.25rpx auto;
+}
+
+.orders .aa .single{
+	width:100%;
+	overflow:hidden;
+}
+
+.orders .aa .omg{
+	width: 75rpx;
+	height: 75rpx;
+	border-radius: 5px;
+	overflow: hidden;
+	float: left;
+	margin: 11.25rpx;
+	border: 1px solid #E5E5E5;
+}
+
+.orders .aa .omg image{
+	width: 100%;
+}
+
+.orders .aa .inf{
+	width: 75%;
+	float: left;
+	overflow: hidden;
+}
+
+.orders .aa .price{
+	width: 25%;
+	float: left;
+	text-align: center;
+	color: #ff5044;
+}
+
+.orders .aa .inf .nns{
+	font-size: 27rpx;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.ospan text{
+  color: #B9B9B9;
+  margin-right: 20rpx;
+}
+
+.abig{
+	width:100%;
+	overflow:hidden;
+}
+
+.orders .aa .do{
+	width: 80%;
+	float: left;
+	overflow: hidden;
+	margin-top:11.25rpx;
+}
+
+.orders .aa .how{
+	text-align: right;
+	/* margin-top: 0.2rem; */
+	float: right;
+}
+
+.orders .aa .inf .prize .sl{
+	color: #c3c3c3;
+	margin-right: 112.5rpx;
+}
+
+.orders .aa .inf .prize .hh{
+	color: #ff5044;
+	margin-right: 37.5rpx;
+}
+
+.orders .how span{
+	display: inline-block;
+	height: 52.5rpx;
+	padding: 0 37.5rpx;
+	border-radius: 26.25rpx;
+	line-height: 52.5rpx;
+	font-size: 26.25rpx;
+	width: 112.5rpx;
+	text-align: center;
+}
+
+.orders .how span.del{
+	border: 1px solid #b7b7b7;
+	color: #b7b7b7;
+	/* margin-top: 0.15rem; */
+	margin-right: 11.25rpx;
+}
+
+.orders .how span.pays{
+	border: 1px solid #ff837b;
+	color: #ff837b;
+	margin-right: 37.5rpx;
+	margin-top: 11.25rpx;
+}
+
+.orders .how span.pays a{
+	color: #ff837b;
+}
+
+.orders .how{
+	text-align: right;
+	/* margin-top: 0.2rem; */
+}
+
+.orders .money{
+	width: 100%;
+	line-height: 60rpx;
+}
+
+.orders .money .nn{
+	margin-left: 9.75rpx;
+	margin-right: 11.25rpx;
+	font-size: 22.5rpx;
+}
+
+.orders .money .ma{
+	color: #ff7167;
+}
+
+.orders  textarea{
+	width: 95%;
+	height: 225rpx;
+	margin-left: 2.5%;
+	overflow: hidden;
+	resize: none;
+}
+
+.bnts{
+	width: 95%;
+	height:60rpx;
+	border-radius: 30rpx;
+	background-color: #ff5637;
+	margin-left: 2.5%;
+	overflow: hidden;
+	margin-top: 33.75rpx;
+	text-align: center;
+	line-height: 60rpx;
+}
+
+.bnts a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color:#ff5637;
+	color: white;
+	border: none;outline: none;
+	font-size: 1rem;
+}
+
+.bnts button{
+	width: 100%;
+	height: 100%;
+	background-color:#ff5637;
+	color: white;
+	border: none;outline: none;
+  font-size: 26.25rpx;
+}

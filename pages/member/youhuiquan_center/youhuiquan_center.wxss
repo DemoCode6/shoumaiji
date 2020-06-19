@@ -1,0 +1,97 @@
+/* pages/youhuiquan/youhuiquan.wxss */
+.one{
+	width: 95%;
+	overflow: hidden;
+	margin: 11.25rpx auto;
+	height: 127.5rpx;
+}
+
+.one navigator{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.one .yhq{
+	width: 75%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	background-color: #FFF5F3;
+	border-radius: 10px;
+}
+.one .use{
+	width: 24.5%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	background-color: #FFF5F3;
+	border-left: 1px dashed #EADCD6;
+	border-radius: 10px;
+}
+
+.one .yhq .img_pro{
+	width: 97.5rpx;
+	height: 97.5rpx;
+	border-radius: 5px;
+	margin: 15rpx;
+	float: left;
+	overflow: hidden;
+}
+
+.one .yhq .img_pro image{
+	width: 100%;
+	height: 100%;
+}
+
+.one .yhq .yhqxx{
+	float: left;
+}
+
+.one .yhq .yhqxx .mj{
+	color: #FF6F43;
+	font-size: 22.5rpx;
+	margin-top: 7.5rpx;
+}
+
+.one .yhq .yhqxx .mj text{
+	font-size: 30rpx;
+	color: #FF6F43;
+	margin-right: 11.25rpx;
+}
+
+.one .yhq .nn{
+	color: #766D6C;
+	margin: 2.25rpx 0;
+}
+
+.use text{
+  display: inline-block;
+	height: 37.5rpx;
+	padding: 3.75rpx 15rpx;
+	border-radius: 22.5rpx;
+	margin: 41.25rpx auto;
+	color: white;
+  margin-left: 19%;
+}
+
+.bnts{
+	width: 95%;
+	height: 75rpx;
+	border-radius: 37.5rpx;
+	background-color: #ff5637;
+	margin-left: 2.5%;
+	overflow: hidden;
+	margin-top: 37.5rpx;
+}
+
+.bnts navigator{
+	width: 100%;
+	height: 100%;
+	background-color:#ff5637;
+	color: white;
+	border: none;outline: none;
+  font-size: 26.25rpx;
+  text-align: center;
+  line-height: 75rpx;
+}

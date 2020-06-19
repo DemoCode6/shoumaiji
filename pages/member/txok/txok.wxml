@@ -1,0 +1,8 @@
+<view style="width: 100%;text-align: center;">
+  <image src="{{globalData.static_domain}}ok.png" style="width: 70%;margin-top: 15rpx;" mode="widthFix"></image>
+</view>
+<view style="text-align: center;font-size: 30rpx;margin: 22.5rpx 0 11.25rpx 0;">提现成功</view>
+<view style="text-align: center;font-size: 26.25rpx;color: #b5b5b5;">我们将在三个工作日内处理您的提现申请</view>
+<view class="bnts">
+  <navigator hover-class="none" url='/pages/member/tixian_record/tixian_record'>完成</navigator>
+</view>

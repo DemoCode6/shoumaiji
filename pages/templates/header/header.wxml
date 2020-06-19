@@ -1,0 +1,21 @@
+<template name="header">
+<view class="logo">
+    <image src="../../images/logo.png" mode="widthFix"></image>
+</view>
+<!-- <view class="ouls">
+    <view class="head_li foc"><navigator hover-class="none" url='/pages/product/index/index'>首页<text></text></navigator></view>
+    <view class="head_li"><navigator hover-class="none" url='/pages/product/xilie/xilie'>产品中心<text></text></navigator></view>
+    <view class="head_li"><navigator hover-class="none" url='/pages/member/index/index'>个人中心<text></text></navigator></view>
+
+   <view class="head_li"><navigator hover-class="none" url='/pages/member/orderlist/orderlist'>我的订单<text></text></navigator></view>
+    <view class="head_li"><navigator hover-class="none">联系我们<text></text></navigator></view>
+</view> -->
+</template>
+
+
+<template name="nothing">
+<view  style='width:100%;text-align:center;'>
+  <image src="../../images/nothing.png" mode="widthFix" style="width:300rpx;"/>
+  <view style='margin-top:60rpx;color:#c1c1c1;'>暂无内容</view>
+</view>
+</template>

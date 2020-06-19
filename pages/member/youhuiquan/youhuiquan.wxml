@@ -1,0 +1,30 @@
+<view class="yhq_con" style="margin-top: 90rpx;">
+  <block wx:for="{{view.res}}" wx:for-index="key" wx:for-item="vo">
+  <view class="one">
+    <view>
+      <view class="yhq">
+        <view class="img_pro">
+          <image src="{{globalData.static_domain}}timg2.jpg" mode="widthFix"/>
+        </view>
+        <view class="yhqxx">
+          <view class="mj">￥ <text>{{vo.getyouhuiquan.type == 1 ? vo.getyouhuiquan.price : '满'+vo.getyouhuiquan.price[0]+'元减'+vo.getyouhuiquan.price[1]+'元' }}</text></view>
+          <view class="nn">{{vo.getyouhuiquan.name}}</view>
+          <view class="nn">有效期至{{vo.getyouhuiquan.expire_date}}</view>
+        </view>
+      </view>
+      <view class="use">
+        <navigator hover-class="none" catchtap='jump' wx:if="{{vo.status == 0}}"  style="background:#ff5637;">去使用</navigator>
+        <navigator hover-class="none" wx:if="{{vo.status == 1}}" style="background:#3f3f3f;">已使用</navigator>
+        <navigator hover-class="none" wx:if="{{vo.status == 2}}" style="background:#3f3f3f;">已过期</navigator>
+      </view>
+    </view>
+  </view>
+  </block>
+</view>
+
+<view class="bnts">
+  <navigator hover-class="none" url='/pages/member/youhuiquan_center/youhuiquan_center'>去领券中心</navigator>
+</view>
+
+<!-- <import src="../../templates/footer/footer.wxml"/>
+<template is="footer" data="{{footer}}"/> -->

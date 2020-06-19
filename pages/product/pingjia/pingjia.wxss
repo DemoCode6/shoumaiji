@@ -1,0 +1,135 @@
+/* pages/pinjialist/pinjialist.wxss */
+page{
+  padding-bottom:95rpx; 
+}
+.bqian{
+	width: 100%;
+	overflow: hidden;
+	margin-top: 18.75rpx;
+}
+
+.bqian .foc{
+	background-color: #ff4e42 !important;
+	color: white;
+}
+
+.bqian .aqian{
+	display: inline-block;
+	width: 117.75rpx;
+	height: 42.57rpx;
+	text-align: center;
+	background-color: #dddddd;
+	line-height: 42.57rpx;
+	font-size: 25.5rpx;
+	border-radius: 21.375rpx;
+	margin-left: 13.5rpx;
+	margin-bottom: 11.25rpx;
+	float: left;
+}
+
+.bqian .plmethod{
+	display: inline-block;
+	height: 42.75rpx;
+	padding: 0 15rpx;
+	float: left;
+	background-color: #ffe6e4;
+	border-radius: 18.75rpx;
+	font-size: 25.5rpx;
+	line-height: 42.57rpx;
+	margin-left: 13.5rpx;
+	margin-bottom: 11.25rpx;
+}
+
+.listpl{
+	width: 100%;
+	overflow: hidden;
+	margin-top: 22.5rpx;
+}
+
+.listpl .olis{
+	width: 95%;
+	padding: 7.5rpx 2.5%;
+	margin-bottom: 11.25rpx;
+	background-color: white;
+}
+
+.listpl .olis .host{
+	width: 100%;
+	overflow: hidden;
+}
+
+.listpl .olis .host .ppic{
+	width: 56.25rpx;
+	height: 56.25rpx;
+	border-radius: 50%;
+	float: left;
+	margin-top: 7.5rpx;
+}
+
+.listpl .olis .host .ppic image{
+	width: 95%;
+	height: 95%;
+	border-radius: 50%;
+}
+
+.listpl .olis .host text{
+	font-size: 24rpx;
+	line-height:52.5rpx;
+	margin-left:7.5rpx;
+}
+
+.listpl .olis .host .hy{
+	width: 135rpx;
+}
+
+.listpl .olis .times text{
+	color: #acacac;
+	font-size: 25.5rpx;
+	line-height: 37.5rpx;
+	/*margin-left: 0.8rem;*/
+}
+
+.listpl .olis .ply{
+	width: 90%;
+	margin-left: 60rpx;
+	font-size: 25.5rpx;
+	line-height: 37.5rpx;
+	margin-top: 15rpx;
+}
+
+.listpl .olis .ply image{width: auto;height: auto}
+
+.listpl .olis ul{
+	width: 90%;
+	margin-left: 0.8rem;
+	overflow: hidden;
+	margin-top: 0.15rem;
+}
+
+.listpl .olis ul li{
+	width: 32%;
+	overflow: hidden;
+	float: left;
+	margin: 0 0.5%;
+	margin-bottom: 0.15rem;
+	border-radius: 5px;
+	overflow: hidden;
+	background-color: #eee;
+}
+
+.listpl .olis ul li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.listpl .olis ul li image{
+	    /*height: 100%;*/
+    width: 100%;
+}
+
+.post {width: 91%;margin-left: 0.8rem;color: #252525;padding-bottom: 10px;overflow: hidden;margin-top: 0.2rem;}
+.post image {/* padding: 10px 5px 0 0; */display: block;/* max-height: 130px; *//* max-width: 130px; */}
+
+.post .list-img {width: 33%;max-height: 33%;/*max-width: 103px;*/margin-bottom: 0.05rem;/* padding-right: 5px; */float: left;object-fit: cover;border-radius: 5px;margin-right: 0.3%;}
+.post .list-img:last-child { padding-right: 0 }

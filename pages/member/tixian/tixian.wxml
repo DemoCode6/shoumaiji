@@ -1,0 +1,15 @@
+<view style="width: 95%;margin-left: 2.5%;margin-top: 75rpx;">
+  提现金额</view>
+<view style="width: 95%;margin-left: 2.5%;border-bottom: 1px solid #b2b2b2;margin-top: 22.5rpx;padding-bottom: 11.25rpx;overflow:hidden;">
+  <text style='float:left;line-height:35rpx;margin-top:10rpx;'>￥</text>
+  <input type="text" placeholder="最低可提现{{view.res.xiane}}元" bindinput="money" style="width: 85%;float:left;line-height:35rpx;"></input>
+  <text style='float:left;line-height:35rpx;margin-top:10rpx;'>元</text>
+</view>
+<view style="width: 95%;margin-left: 2.5%;color: #c7c7c7;font-size: 24rpx;">注：提现金额将转入微信钱包，请在微信钱包查看</view>
+
+<view class="bnts">
+  <button catchtap='tixian'>确认提现</button>
+</view>
+
+<!-- <import src="../../templates/footer/footer.wxml" />
+<template is="footer" data="{{footer}}" /> -->

@@ -1,0 +1,38 @@
+.newsdetail{
+  width: 95%;
+  overflow: hidden;
+  margin: 10rpx auto;
+}
+
+.newsdetail .title{
+  display: inline-block;
+  width: 100%;
+  color: #444;
+  line-height: 35rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.newsdetail .time{
+  display: inline-block;
+  width: 100%;
+  color: #c4c4c4;
+  line-height: 30rpx;
+  font-size: 25rpx;
+}
+
+.newsdetail .container{
+  width: 100%;
+  overflow: hidden;
+}
+
+.newsdetail .container text{
+  font-size: 27rpx;
+  line-height: 32rpx;
+  margin: 0;
+}
+
+.wxParse-inline{
+  background-color: white;
+  font-size: 27.75rpx;
+}

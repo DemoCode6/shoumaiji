@@ -1,0 +1,213 @@
+/* pages/tjaddress/tjaddress.wxss */
+.send{
+	width: 95%;
+	border: 1px solid #f5f5f5;
+	height: 75rpx;
+	border-radius: 5px;
+	margin: 11.25rpx 2.5%;
+	background-color:white;
+}
+
+.send .tot{
+	margin-left: 22.5rpx;
+	line-height: 75rpx;
+	float: left;
+}
+
+.send .inpot{
+	width: 70%;
+	height: 100%;
+	border: none;
+	outline: none;
+	float: left;
+	text-indent: 1em;
+	color: #686868;
+}
+
+.send .ts{
+	float: right;
+	margin-right: 22.5rpx;
+	margin-top: 56.25rpx;
+	width: 112.5rpx;
+}
+
+.send .odivs{
+	width: 65%;
+	height: 75rpx;
+	float: left;
+	text-indent: 1em;
+	border: 1px solid #f5f5f5;
+	border-radius: 5px;
+	margin-left: 1%;
+	margin-bottom: 11.25rpx;
+}
+
+.send .odivs input{
+	width: 100%;
+	height: 100%;
+	line-height: 225rpx;
+	color: #686868;
+}
+
+.mr{
+	width: 55%;
+	float: right;
+	margin-right: 2.5%;
+	text-align: right;
+}
+
+.mr .text{
+	color: #ff4e42;
+	float: right;
+}
+
+.mr .cir{
+	display: block;
+	width: 26.25rpx;
+	height: 26.25rpx;
+	border-radius: 50%;
+	border: 1px solid #ff4e42;
+	position: relative;
+	float: right;
+	margin-right:11.25rpx;
+}
+
+.mr .cir text{
+	display: block;
+	width: 11.25rpx;
+	height: 11.25rpx;
+	border-radius: 50%;
+	background-color: #ff4e42;
+	position: absolute;
+	top: 7.5rpx;
+	left: 7.5rpx;
+}
+
+.bnts{
+	width: 95%;
+	height: 75rpx;
+	border-radius:37.5rpx;
+	background-color: #ff5637;
+	margin-left: 2.5%;
+	overflow: hidden;
+	margin-top: 37.5rpx;
+}
+
+.bnts button{
+	width: 100%;
+	height: 100%;
+	background-color:#ff5637;
+	color: white;
+	border: none;outline: none;
+  font-size: 26.25rpx;
+}
+
+.mask{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+/* .perfect button{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: white;
+	font-size: 30rpx;
+} */
+
+/**app.wxss**/
+.container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+} 
+
+.citypickers{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+  background-color: red;
+}
+
+.citypicker{
+  
+}
+.citybody {
+  position: fixed;
+  bottom: 0px;
+  background-color: white;
+  z-index: 999;
+}
+
+.cityheader {
+  position: absolute;
+  top:0px;
+  width: 100%;
+  z-index: 4;
+}
+
+.city-cancel {
+  float: left;
+  margin: 20rpx;
+  color: #818181;
+}
+
+.city-true {
+  float: right;
+  margin: 20rpx;
+  color: #2FB42E
+}
+
+.section .picker {
+  background-color: #fff;
+  border-bottom: 1px #d9d9d9 solid;
+  border-top: 1px #d9d9d9 solid;
+  padding: 20rpx;
+}
+
+/**index.wxss**/
+.input {
+  padding-top: 300rpx;
+  width: 100%;
+}
+
+.input input {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px #d9d9d9 solid;
+  border-top: 1px #d9d9d9 solid;
+  padding: 20rpx 50rpx;
+}
+
+.section {
+  padding-top: 20rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}

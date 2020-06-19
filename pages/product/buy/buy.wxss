@@ -1,0 +1,694 @@
+@import "/css/iconfont.wxss";
+
+.address {
+	width: 90%;
+	overflow: hidden;
+	border-radius: 5px;
+	border: 1px solid #E5E5E5;
+	margin-left: 5%;
+	margin-top: 37.5rpx;
+	position: relative;
+	background-color: white;
+	padding-bottom: 11.25rpx;
+}
+
+.phone_input {
+	border: 1px solid #e1e1e1;
+	margin-left: 3%;
+	border-radius: 10rpx;
+	line-height: 70rpx;
+	height: 70rpx;
+	padding-left: 20rpx;
+	width: 90%;
+
+}
+
+.address .addb {
+	display: block;
+	width: 100%;
+	height: 112.5rpx;
+	overflow: hidden;
+}
+
+.address .addb .adda {
+	width: 37.5rpx;
+	float: left;
+	margin-top: 37.5rpx;
+	margin-left: 75rpx;
+}
+
+.address .addb text {
+	float: left;
+	margin-top: 37.5rpx;
+	margin-left: 37.5rpx;
+	color: #b2b2b2;
+}
+
+
+.address .imgbor {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.address .lefts {
+	width: 78%;
+	float: left;
+	overflow: hidden;
+	margin-left: 2.5%;
+}
+
+.address .rightsb {
+	width: 75rpx;
+	float: right;
+	overflow: hidden;
+	margin-right: 2.5%;
+	margin-top: 11.25rpx;
+}
+
+.address .people {
+	width: 100%;
+	margin-top: 11.25rpx;
+	overflow: hidden;
+	float: left;
+}
+
+.address .place {
+	margin-top: 37.5rpx;
+	overflow: hidden;
+	line-height: 52.5rpx;
+	width: 100%;
+}
+
+.address .cirs {
+	width: 75rpx;
+	float: right;
+	margin-right: 2.5%;
+	text-align: center;
+	font-size: 37.5rpx;
+	font-weight: 600;
+	color: #acacac;
+	line-height: 112.5rpx;
+}
+
+.address .change {
+	display: none;
+	background-color: #878787;
+	border-bottom-left-radius: 75rpx;
+	border-bottom-right-radius: 75rpx;
+	border-top-left-radius: 75rpx;
+	border-top-right-radius: 75rpx;
+	width: 60rpx;
+	float: right;
+	margin-right: 2.5%;
+	height: 112.5rpx;
+	text-align: center;
+}
+
+.address .change a {
+	display: block;
+	width: 100%;
+	height: 50%;
+}
+
+
+.address .changes {
+	display: block;
+	width: 15%;
+	float: right;
+	margin-right: 2.5%;
+	height: 112.5rpx;
+	text-align: center;
+}
+
+.address .changes image {
+	width: 75rpx;
+	margin-top: 18.75rpx;
+}
+
+.address .change image {
+	width: 26.25rpx;
+	margin-top: 7.5rpx;
+}
+
+.address .people text {
+	display: block;
+	width: 50%;
+	float: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.infor {
+	width: 90%;
+	overflow: hidden;
+	border-radius: 5px;
+	border: 1px solid #E5E5E5;
+	margin-left: 5%;
+	margin-top: 15rpx;
+	padding-bottom: 9rpx;
+	background-color: white;
+}
+
+.infor .nunp {
+	width: 95%;
+	margin-left: 2.5%;
+	border-bottom: 1px solid #e6e6e6;
+	margin-top: 11.25rpx;
+	overflow: hidden;
+	padding-bottom: 11.25rpx;
+}
+
+.infor .nunp .pict {
+	width: 30%;
+	float: left;
+	height: 165rpx;
+	overflow: hidden;
+}
+
+.infor .nunp .namea {
+	width: 68%;
+	float: left;
+	margin-left: 1%;
+	position: relative;
+}
+
+.infor .nunp .namea .dela {
+	position: absolute;
+	width: 45rpx;
+	overflow: hidden;
+	right: 9.75rpx;
+	top: 41.25rpx;
+}
+
+.infor .nunp .namea .dela text {
+	font-size: 60rpx;
+	color: #C3C3C3;
+	float: left;
+	line-height: 112.5rpx;
+}
+
+.infor .nunp .namea .dela image {
+	height: 45rpx;
+	float: left;
+}
+
+.infor .nunp .pict image {
+	width: 90%;
+}
+
+.infor .nunp .namea .proname {
+	font-size: 26.25rpx;
+	margin-bottom: 9.75rpx;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.infor .nunp .namea .state {
+	color: #b9b9b9;
+	font-size: 24rpx;
+	margin-bottom: 7.5rpx;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.infor .nunp .prize {
+	font-size: 37.5rpx;
+	color: #ff5044;
+}
+
+.infor .nunp input {
+	width: 75rpx;
+	text-align: center;
+	color: #b4b4b4;
+}
+
+.infor .nunp .fh {
+	display: inline-block;
+	width: 40rpx;
+	height: 40rpx;
+	border: 1px solid #b4b4b4;
+	color: #b4b4b4;
+	text-align: center;
+	margin-top: 11.25rpx;
+	line-height: 30rpx;
+}
+
+.infor .nunp .fhh {
+	display: inline-block;
+	width: 40rpx;
+	height: 40rpx;
+	/* border: 1px solid #b4b4b4; */
+	color: #b4b4b4;
+	text-align: center;
+	margin-top: 11.25rpx;
+	line-height: 30rpx;
+}
+
+.infor .nunp .llef {
+	line-height: 60rpx;
+	color: #717171;
+	float: left;
+}
+
+.infor .nunp .rrig {
+	float: right;
+	color: #717171;
+	line-height: 60rpx;
+}
+
+.infor .nunp textarea {
+	width: 80%;
+	float: right;
+	height: 150rpx;
+	border: none;
+	outline: none;
+	resize: none;
+	line-height: 60rpx;
+	margin-top: 15rpx;
+}
+
+.total {
+	text-align: right;
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 11.25rpx;
+}
+
+.total>text {
+	color: #bcbcbc;
+}
+
+.total>text .red {
+	color: #ff5348;
+}
+
+.pay {
+	width: 100%;
+	height: 85.5rpx;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	border-top: 1px solid #E5E5E5;
+	background-color: white;
+	z-index: 99999;
+}
+
+.pay button {
+	width: 300rpx;
+	height: 100%;
+	background-color: #ff5933;
+	color: white;
+	outline: none;
+	border: none;
+	float: right;
+	font-size: 26.25rpx;
+	border-radius: 0;
+	line-height: 85.5rpx;
+}
+
+.pay .all {
+	line-height: 82.5rpx;
+	float: right;
+	margin-right: 15rpx;
+}
+
+.pay .all .mm {
+	color: #ff5933;
+}
+
+.prodetail_mask {
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	top: 0;
+	left: 0;
+
+}
+
+.prodetail_mask .choose_add {
+	width: 100%;
+	overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	background-color: white;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	padding-bottom: 1rem;
+	display: none;
+	padding-top: 0.5rem;
+}
+
+.prodetail_mask .choose_add .prosa {
+	width: 95%;
+	margin-left: 2.5%;
+	overflow: hidden;
+	padding-bottom: 0.2rem;
+}
+
+.prodetail_mask .choose_add .prosa .imga {
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 4px;
+	box-shadow: 0 0 3px 3px #f3f3f3;
+	float: left;
+	margin-top: 0.15rem;
+}
+
+.prodetail_mask .choose_add .prosa .imga img {
+	width: 1.2rem;
+	height: 1.2rem;
+	margin: 0.15rem;
+}
+
+.prodetail_mask .choose_add .prosa .xx {
+	/*width: 50%;*/
+	float: left;
+	margin-left: 0.2rem;
+	overflow: hidden;
+	margin-top: 0.13rem;
+}
+
+.prodetail_mask .choose_add .prosa .xx .pri {
+	color: #ff4e42;
+	font-size: 0.4rem;
+}
+
+.prodetail_mask .choose_add .prosa .xx .pri span {
+	font-size: 0.5rem;
+	color: #ff4e42;
+}
+
+.prodetail_mask .choose_add .cpfl,
+.prodetail_mask .choose_add .buynun {
+	width: 95%;
+	margin-left: 2.5%;
+	overflow: hidden;
+}
+
+.prodetail_mask .choose_add .cpfl p {
+	margin: 0.1rem 0;
+	overflow: hidden;
+}
+
+.prodetail_mask .choose_add .cpfl p span {
+	display: inline-block;
+	float: left;
+	margin-right: 0.5rem;
+	background-color: #f3f3f3;
+	padding: 0.1rem 0.3rem;
+	border-radius: 0.6rem;
+}
+
+.prodetail_mask .choose_add .cpfl p span.foc {
+	background-color: #f6c530;
+	color: white;
+}
+
+.prodetail_mask .choose_add .buynun {
+	margin-top: 0.8rem;
+	overflow: hidden;
+}
+
+.prodetail_mask .choose_add .buynun .osp {
+	float: left;
+}
+
+.prodetail_mask .choose_add .buynun .nuns {
+	width: 50%;
+	float: right;
+	text-align: right;
+}
+
+.prodetail_mask .choose_add .buynun .nuns input {
+	width: 1rem;
+	text-align: center;
+}
+
+.prodetail_mask .choose_add .buynun .nuns span {
+	display: inline-block;
+	width: 0.4rem;
+	height: 0.4rem;
+	text-align: center;
+	line-height: 0.4rem;
+	border: 1px solid #cccccc;
+	/* padding: 0 0 0.1rem 0; */
+}
+
+.prodetail_mask .off {
+	position: absolute;
+	right: 18.75rpx;
+	top: 11.25rpx;
+	width: 37.5rpx;
+}
+
+.prodetail_mask .choose_add .tit {
+	text-align: center;
+	margin: 15rpx auto;
+}
+
+.prodetail_mask .choose_add .canshu {
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 0.5rem;
+	overflow: hidden;
+}
+
+.prodetail_mask .choose_add .canshu p {
+	margin-bottom: 7.5rpx;
+	line-height: 37.5rpx;
+	width: 100%;
+	overflow: hidden;
+}
+
+.prodetail_mask .choose_add .canshu .name {
+	display: inline-block;
+	width: 30%;
+	float: left;
+	color: #b8b8b8;
+}
+
+
+.prodetail_mask .choose_add .canshu .ser {
+	display: inline-block;
+	width: 30%;
+	float: left;
+}
+
+.prodetail_mask .choose_add .canshu .answer,
+.prodetail_mask .choose_add .canshu .do {
+	display: inline-block;
+	width: 70%;
+	overflow: hidden;
+	float: left;
+}
+
+.prodetail_mask .choose_add .oka {
+	width: 80%;
+	margin-left: 10%;
+	text-align: center;
+	line-height: 75rpx;
+	color: white;
+	background-color: #ff5933;
+	border-radius: 37.5rpx;
+	margin-top: 60rpx;
+}
+
+.prodetail_mask .choose_add .canshu .do {
+	font-size: 26.25rpx;
+	color: #c1c1c1;
+}
+
+.actives {
+	width: 80%;
+	margin-left: 10%;
+	height: 150rpx;
+	border-radius: 5px;
+	border: 1px solid #b78910;
+	margin-top: 37.5rpx;
+}
+
+.actives .img {
+	width: 20%;
+	height: 100%;
+	text-align: center;
+	float: left;
+}
+
+.actives .img image {
+	width: 75rpx;
+	margin-top: 37.5rpx;
+}
+
+.actives .opc {
+	width: 80%;
+	float: left;
+	height: 100%;
+}
+
+.actives .opc view {
+	color: #b6880e;
+}
+
+page {
+	padding-bottom: 90rpx;
+}
+
+.paytitle {
+	width: 100%;
+	height: 106rpx;
+	background: #fff;
+	font-size: 32rpx;
+	color: #030303;
+	padding: 0 30rpx;
+	box-sizing: border-box;
+	line-height: 106rpx;
+	position: relative;
+}
+
+.WeChat {
+	background: #fff;
+	width: 100%;
+	height: 92rpx;
+	border-top: 2rpx solid #f1f1f1;
+	line-height: 92rpx;
+	padding: 0 30rpx;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.WeChat .icon-xuanzhong1 {
+	float: right;
+}
+
+.icon-weixin {
+	color: #4cb202;
+	margin-right: 15rpx;
+}
+
+.icon-jifen1 {
+	color: #999;
+	margin-right: 15rpx;
+
+}
+
+.icon-xuanzhong1 {
+	color: #b90300;
+	font-size: 35rpx;
+}
+
+.icon-xuanzhongyuandian {
+	font-size: 35rpx;
+}
+
+.tan_mask {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	height: 100%;
+	z-index: 999;
+}
+
+.tan_wrap {
+	width: 100%;
+	background: #fff;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 99999;
+	height: 560rpx;
+	padding: 0 30rpx;
+	box-sizing: border-box;
+}
+
+.tan_title_wrap {
+	font-size: 32rpx;
+	color: #565656;
+	line-height: 80rpx;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0 30rpx;
+	box-sizing: border-box;
+}
+
+.jiaru_auto {
+	width: 100%;
+	height: 480rpx;
+	overflow: auto;
+}
+
+.jiaru_wrap {
+	width: 100%;
+	/* height: 140rpx; */
+	border-radius: 5px;
+	border-bottom: 1px solid #d2d2d2;
+	/* box-shadow: 1px 1px 8px #d2d2d2; */
+	padding: 30rpx 20rpx;
+	box-sizing: border-box;
+	position: relative;
+	margin-bottom: 20rpx;
+}
+
+.jiaru_user {
+	width: 70%;
+	height: 42rpx;
+	font-size: 30rpx;
+	color: #000;
+	line-height: 42rpx;
+}
+
+.jiaru_user image {
+	width: 42rpx;
+	height: 42rpx;
+	border-radius: 50%;
+	display: block;
+	float: left;
+	margin-right: 10rpx;
+
+}
+
+.jiaru_hist {
+	font-size: 28rpx;
+	color: #8c8c8c;
+	/* margin-top: 16rpx; */
+}
+
+.jiaru_but {
+	width: 120rpx;
+	height: 60rpx;
+	border-radius: 30px;
+	border: 1px solid #dcdcdc;
+	background: #f4f4f4;
+	font-size: 24rpx;
+	color: #000;
+	position: absolute;
+	top: 0;
+	right: 20rpx;
+	bottom: 0;
+	margin: auto;
+	text-align: center;
+	line-height: 60rpx;
+}
+
+.jiaru_butOn {
+	color: #fff !important;
+	background: #3e9a37 !important;
+	border: 1px solid #3e9a37 !important;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+	color: transparent;
+}

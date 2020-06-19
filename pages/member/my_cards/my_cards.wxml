@@ -1,0 +1,25 @@
+<view class="wrap">
+  <block wx:for="{{my_cards}}" wx:for-index="key" wx:for-item="vo">
+    <view class="card_wrap" catchtap="my_cards_detail" id="{{vo.id}}"  wx:if="{{vo.status == 1}}">
+      <image src="{{globalData.img_domain}}/compress/{{vo.getcard.img}}"></image>
+      <view class="card_text">
+        <view class="card_title">{{vo.getcard.name}}</view>
+        <view class="cardPrice">购物享{{vo.getcard.zekou}}折</view>
+        <view class="gongsiName">卡号：{{vo.card_number}}</view>
+        <view class="gongsiName">有效期至：{{vo.expire_date}}</view>
+      </view>
+    </view>
+
+    <view class="card_wrap" catchtap="member_card_detail" id="{{vo.getcard.id}}"  wx:if="{{vo.status == 2}}">
+      <image src="{{globalData.img_domain}}/compress/{{vo.getcard.img}}"></image>
+      <view class="card_text">
+        <view class="card_title">{{vo.getcard.name}}</view>
+        <view class="cardPrice">购物享{{vo.getcard.zekou}}折</view>
+        <view class="gongsiName">卡号：{{vo.card_number}}</view>
+        <view class="gongsiName">已过期</view>
+        <view class="card_corner">续费</view>
+      </view>
+    </view>
+  </block>
+</view>
+<view wx:if="{{my_cards.length == 0}}">空空如也~~</view>

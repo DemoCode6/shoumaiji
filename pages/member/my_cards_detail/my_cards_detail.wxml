@@ -1,0 +1,43 @@
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="wrap">
+  <view class="card_wrap" catchtap="card_xq">
+    <image src="{{globalData.img_domain}}/compress/{{res.getcard.img}}"></image>
+  </view>
+
+  <view class="card_content_Wrap">
+    <view class="card_content">
+      <text>名称</text>
+      <text>{{res.getcard.name}}</text>
+    </view>
+    <view class="card_content">
+      <text>卡号</text>
+      <text>{{res.card_number}}</text>
+    </view>
+    <view class="card_content">
+      <text>有效期至</text>
+      <text>{{res.expire_date}}</text>
+    </view>
+  </view>
+
+  <view style="margin: 30rpx auto;text-align: center;width: 100%;background-color: #fff;padding: 30rpx 0;">
+    <image src="{{globalData.img_domain}}/{{img}}" style="width: 400rpx;height: 400rpx;"></image>
+    <view style="text-align:center;font-size:30rpx;">请展示给店员扫码</view>
+  </view>
+
+  <view class="card_content_Wrap">
+    <view class="Explain">说明</view>
+    <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+  </view>
+
+  <view style="color:#666;background-color: #fff;padding-left: 26rpx;margin-bottom: 50rpx;">
+    <view style="font-size: 30rpx;line-height: 60rpx;">领取历史</view>
+    <block wx:for="{{member_card_fuli}}" wx:for-index="key" wx:for-item="vo">
+      <view style="border-bottom: 1px solid #e1e1e1;line-height: 46rpx;">
+        <view>店铺：{{vo.dianpu_name}}</view>
+        <view>扫码人：{{vo.saomaren}}</view>
+        <view>{{vo.fuli_summary}}</view>
+        <view>{{vo.date}}</view>
+      </view>
+    </block>
+  </view>
+</view>

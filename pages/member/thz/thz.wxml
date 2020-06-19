@@ -1,0 +1,42 @@
+<view class="states">
+  <view style="margin-top: 37.5rpx;">请等待商家处理</view>
+  <!-- <p>还剩2天23小时23分~</p> -->
+</view>
+<view style="width: 95%;margin-left: 2.5%;font-size:26.25rpx;margin:26.25rpx auto;">您已成功发起退款申请，请耐心等待商家处理</view>
+<view class="orders">
+  <view class="aa">
+    <view style="font-size: 27.75rpx;width: 95%;margin-left: 2.5%;margin-bottom: 15rpx;font-weight: 600;">退货商品</view>
+    <block wx:for="{{view.res.getdetail}}" wx:for-item="vo">
+      <view class="abig">
+        <view class="omg">
+          <image src="{{globalData.img_domain}}/{{vo.getproduct.img}}" mode='widthFix'></image>
+        </view>
+        <view class="do">
+          <view class="inf">
+            <view class="nns">{{vo.getproduct.name}}</view>
+            <view class="ospan">
+              <text>{{vo.mingzhi}}</text>
+              <text>x{{vo.number}}</text>
+            </view>
+          </view>
+          <view class="price">￥{{vo.price}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+
+<view class="orders">
+  <view class="aa">
+    <view class="det" style="margin-top: 0;">
+      <view>退款原因：{{view.res.tuihuo_reason}}</view>
+      <view>退款金额：¥{{view.res.total}}</view>
+      <view>申请时间：{{view.res.tuihuo_date}}</view>
+
+    </view>
+  </view>
+</view>
+
+<!-- <import src="../../templates/footer/footer.wxml" />
+<template is="footer" data="{{footer}}" /> -->

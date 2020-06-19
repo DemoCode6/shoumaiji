@@ -1,0 +1,56 @@
+/* pages/member/member.wxss */
+.send{
+	width: 95%;
+	border: 1px solid #f5f5f5;
+	height: 75rpx;
+	border-radius: 5px;
+	margin: 11.25rpx 2.5%;
+	background-color:white;
+  position: relative;
+}
+
+.send .tot{
+	margin-left: 22.5rpx;
+	line-height: 75rpx;
+	float: left;
+  font-size: 26.25rpx;
+}
+
+.send .inpot{
+	width: 70%;
+	height: 100%;
+	border: none;
+	outline: none;
+	float: left;
+	text-indent: 1em;
+	color: #686868;
+}
+
+.send .ts{
+	float: right;
+	margin-right: 22.5rpx;
+	margin-top: 56.25rpx;
+	width: 112.5rpx;
+ 
+}
+
+.send .odivs{
+	width: 65%;
+	height: 75rpx;
+	float: left;
+	text-indent: 1em;
+	border: 1px solid #f5f5f5;
+	border-radius: 5px;
+	margin-left: 1%;
+	margin-bottom: 11.25rpx;
+}
+
+.send .odivs input{
+	width: 100%;
+	height: 100%;
+	line-height: 225rpx;
+	color: #686868;
+}
+
+.send .rr{float: right;margin-right: 37.5rpx;line-height: 75rpx; font-size: 26.25rpx;}
+.send .to{position: absolute;width: 11.25rpx;right: 11.25rpx;top: 26.25rpx;}

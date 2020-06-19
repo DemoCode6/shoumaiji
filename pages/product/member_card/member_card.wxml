@@ -1,0 +1,14 @@
+<view class="wrap">
+  <block wx:for="{{member_cards}}" wx:for-index="key" wx:for-item="vo">
+    <view class="card_wrap" catchtap="card_xq" catchtap="member_card_detail" id="{{vo.id}}">
+      <image src="{{globalData.img_domain}}/compress/{{vo.img}}"></image>
+      <view class="card_text">
+        <view class="card_title">{{vo.name}}</view>
+        <view class="cardPrice">-----</view>
+        <view class="gongsiName">¥{{vo.price}}</view>
+        <view class="gongsiName">享{{vo.zekou}}折优惠</view>
+        <view class="card_corner">在线购买</view>
+      </view>
+    </view>
+  </block>
+</view>

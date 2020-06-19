@@ -1,0 +1,106 @@
+/* pages/productlist/productlist.wxss */
+
+.about_page{
+  margin: 0 10px;
+}
+.swiper-tab{
+  width: 27%;
+	float: left;
+	overflow: hidden;
+}
+.swiper-tab-item{
+    width: 95%;
+    text-align: center;
+    line-height: 75rpx;
+    background-color: #eaeaea;
+    border-bottom: 1px solid white;
+}
+.active{
+    background-color: white;
+    box-shadow: 0 0 3px 3px #eaeaea;
+}
+.juzhong{
+  margin: 0 auto;
+}
+.domain{
+  background-color: #fff;
+  height: 100%;
+  margin:0 10px;
+}
+.show{
+  width: 100%;
+  overflow-y:scroll;
+  display: block;
+}
+.hidden{
+  display: none;
+}
+.big{
+  width: 72%;
+	overflow: hidden;
+  float: left;
+}
+
+.big .titleb{
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+	margin-top:22.5rpx;
+}
+
+.big .titleb .bor{
+	display: inline-block;
+	width: 150rpx;
+	border-top: 1px solid #767676;
+	height: 7.5rpx;
+}
+
+.big .productb{
+	width: 100%;
+	overflow: hidden;
+	margin-top: 11.25rpx;
+}
+
+.big .productb .prolis{
+	width: 48%;
+	float: left;
+	margin: 18.75rpx 1%;
+	text-align: center;
+}
+
+.big .productb .prolis .products{
+	/*width: 100%;*/
+	width: 210rpx;
+	height: 210rpx;
+	border-radius: 5px;
+	overflow: hidden;
+	margin-bottom: 11.25rpx;
+}
+
+.big .productb .prolis .products image{
+	width: 100%;
+}
+
+.big .productb .prolis .op{
+	font-size: 24rpx;
+	color: #434343;
+	/* text-align: center; */
+  text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.titleb{
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+	margin-top: 22.5rpx;
+}
+
+.titleb .bor{
+	display: inline-block;
+	width: 150rpx;
+	border-top: 1px solid #767676;
+	height: 7.5rpx;
+}

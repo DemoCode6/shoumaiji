@@ -1,0 +1,55 @@
+.newslists {
+  width: 100%;
+  overflow: hidden;
+}
+
+.newslists .onenews {
+  width: 95%;
+  overflow: hidden;
+  margin: 10rpx auto;
+  padding-bottom: 5rpx;
+}
+
+.newslists .onenews .new_img.new_img {
+  width: 120rpx;
+  height: 120rpx;
+  float: left;
+  overflow: hidden;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+}
+
+.newslists .onenews .new_img image {
+  width: 100%;
+}
+
+.newslists .onenews .new_det {
+ width: 100%;
+float: right;
+overflow: hidden;
+line-height: 90rpx;
+border-bottom: 2rpx solid #dedede;
+
+}
+
+.newslists .onenews .new_det .new_title {
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 30rpx;
+  margin-bottom: 8rpx;
+  float: left;
+}
+
+.newslists .onenews .new_det .new_simp {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.newslists .onenews .new_det .new_time {
+  text-align: right;
+  color: #8a8a8a;
+}

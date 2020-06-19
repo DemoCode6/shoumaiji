@@ -1,0 +1,96 @@
+<view class="states">
+  <view style="margin-top: 0.5rem;">订单状态：
+    <block wx:if="{{view.res.status == 0}}">
+      待付款
+    </block>
+    <block wx:if="{{view.res.status == 1}}">
+      {{view.res.peisong_type ? '到店自提(' + view.res.get_dasuan_dianpu.name + ')' : '待发货'}}
+    </block>
+    <block wx:if="{{view.res.status == 2}}">
+      已发货
+    </block>
+    <block wx:if="{{view.res.status == 3}}">
+      已收货
+    </block>
+  </view>
+  <view style="margin-top: 0.5rem;">订单号：{{view.res.order_number}}</view>
+</view>
+<view class="getpeop" wx:if="{{view.res.peisong_type == 0}}">
+  <view>
+    <text>收货人：{{view.res.shouhuo_name}}</text>
+    <text style="float: right;">{{view.res.shouhuo_phone}}</text>
+  </view>
+  <view>
+    收货地址：{{view.res.shouhuo_address}}{{view.shouhuo_address_detail}}
+  </view>
+</view>
+<view class="orders">
+  <view class="aa">
+    <view style="font-size: 28.5rpx;width: 95%;margin-left: 2.5%;margin-bottom: 11.25rpx;font-weight: 600;">商品详情</view>
+    <!-- 未付款 -->
+    <block wx:for="{{view.res.getdetail}}" wx:for-item="vv">
+      <view class="abig">
+        <view class="omg">
+          <image src="{{globalData.img_domain}}/{{vv.getproduct.img}}" mode="widthFix"></image>
+        </view>
+        <view class="do">
+          <view class="inf">
+            <view class="nns">{{vv.getproduct.name}}</view>
+            <view class="ospan">
+              <text>{{vv.mingzhi}}</text>
+              <text>x{{vv.number}}</text>
+            </view>
+          </view>
+          <view class="price">￥{{vv.price}}</view>
+        </view>
+      </view>
+    </block>
+    <view class="kefu" style="float: left;position: relative;margin-top: 15rpx;">
+      <button open-type='contact' style='line-height: 52.5rpx;font-size:26.25rpx;margin-left:0.2rem;'>联系客服</button>
+    </view>
+    <view class="how">
+      <block wx:if="{{view.res.status == 0}}">
+        <text class="del delate" catchtap="del" id="{{view.res.id}}">删除订单</text>
+        <text class="pays" catchtap='pay_now' id='{{view.res.id}}'>立即付款</text>
+      </block>
+
+      <block wx:if="{{view.res.status == 1}}">
+        <block wx:if="{{view.res.is_tuihuo == 0 || view.res.is_tuihuo == 3}}">
+          <text class="pays" catchtap='txfh' id='{{view.res.id}}'>提醒发货</text>
+        </block>
+      </block>
+
+      <block wx:if="{{view.res.status == 2}}">
+        <block wx:if="{{view.res.is_tuihuo == 0 || view.res.is_tuihuo == 3}}">
+          <form bindsubmit="submitInfo" report-submit='true'>
+            <button id='{{view.res.id}}' form-type="submit" type="default" size="mini">确认收货</button>
+          </form>
+        </block>
+      </block>
+
+      <block wx:if="{{view.res.status == 6 && view.res.pintuan_status == 0}}">
+        <button class="pays" style='width:150rpx;' open-type="share">邀请拼团</button>
+      </block>
+
+      <block wx:if="{{view.res.status == 1 || view.res.status == 2}}">
+        <block wx:if="{{view.res.is_tuihuo == 0}}">
+          <navigator hover-class="none" url='/pages/member/tuihuo/tuihuo?id={{view.res.id}}' class="pays">退货</navigator>
+        </block>
+        <block wx:if="{{view.res.is_tuihuo == 1}}">
+          <navigator hover-class="none" url='/pages/member/thz/thz?id={{view.res.id}}' class="pays">退货中</navigator>
+        </block>
+        <block wx:if="{{view.res.is_tuihuo == 2}}">
+          <navigator hover-class="none" url='/pages/member/thok/thok?id={{view.res.id}}' class="pays">退货成功</navigator>
+        </block>
+        <block wx:if="{{view.res.is_tuihuo == 3}}">
+          <navigator hover-class="none" url='/pages/member/tuihuo/tuihuo?id={{view.res.id}}' class="pays">退货</navigator>
+        </block>
+      </block>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{view.res.peisong_type == 1 && view.res.status == 1 && view.res.is_tuihuo == 0}}" style="margin: 30rpx auto;text-align: center;width: 100%;background-color: #fff;padding: 30rpx 0;">
+  <image src="{{globalData.img_domain}}/{{img}}" style="width: 400rpx;height: 400rpx;"></image>
+  <view style="text-align:center;font-size:30rpx;">请展示给店员扫码核销</view>
+</view>

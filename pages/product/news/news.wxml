@@ -1,0 +1,12 @@
+<view class='newslists'>
+  <block wx:for="{{view}}" wx:for-index="key" wx:for-item="vo">
+    <navigator hover-class="none" class='onenews' url="/pages/product/news_detail/news_detail?id={{vo.id}}">
+      <view class='new_det'>
+        <view class='new_title'>{{vo.title}}</view>
+        <view class='new_time'>{{vo.date}}</view>
+      </view>
+    </navigator>
+  </block>
+  
+</view>
+<view style="text-align:center;margin-bottom:10rpx;">{{label}}</view>

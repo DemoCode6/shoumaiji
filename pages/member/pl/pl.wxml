@@ -1,0 +1,42 @@
+<view class="cp">
+  <view class="img_container">
+    <image src="{{globalData.img_domain}}/{{view.getproduct.img}}" mode="widthFix"></image>
+  </view>
+  <view class="omg_xx">
+    <view class="nr">{{view.getproduct.name}}</view>
+    <view class="nun">{{view.mingzhi}}</view>
+  </view>
+</view>
+<view class="main">
+  <view class="emoticons">
+    <view class="publisher">
+      <text>内容：</text>
+      <textarea bindinput="summary" name="summary" placeholder="快来分享你的想法吧~"></textarea>
+    </view>
+  </view>
+  <view class="weui-uploader">
+    <view class="weui-uploader__bd">
+      <view class="weui-uploader__input-box">
+        <input class="weui-uploader__input js_file" type="file" accept="image/jpg,image/jpeg,image/png,image/gif" bindtap='uploader' name="images" style='background:url({{globalData.static_domain}}up.png);background-size:100% 100%;'></input>
+      </view>
+      <block wx:for="{{imagesList}}" wx:for-index="key">
+        <view class="weui-uploader__file">
+          <image class="weui-uploader__img" id='{{key}}' catchtap="del"  src="{{item}}"></image>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+<view class="starpj">
+  <text>宝贝评分</text>
+  <view class="star-pos">
+    <image class='stars' bindtap="changeColor" data-index='0' data-no="{{item}}" wx:for="{{stardata}}" src="{{flag[0]>=item? globalData.static_domain+'star1.png': globalData.static_domain+'star0.png'}}" />
+    <view style='margin-left: 30rpx;'>{{startext[0]}}</view>
+  </view>
+</view>
+<view class="bnts">
+  <button id="sub" catchtap="sub">发布评论</button>
+</view>
+
+<!-- <import src="../../templates/footer/footer.wxml"/>
+<template is="footer" data="{{footer}}"/> -->

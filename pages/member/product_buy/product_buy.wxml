@@ -1,0 +1,26 @@
+<view class="pros" style="margin-top: 1rem;">
+  <block wx:for="{{view.res}}" wx:for-index="key" wx:for-item="vo">
+  <view class='pros_lis'>
+    <navigator hover-class="none" url="/pages/product/detail/detail?id={{vo.id}}">
+      <view class="left">
+        <image src="{{globalData.img_domain}}/compress/{{vo.img}}" mode="widthFix"/>
+      </view>
+      <view class="right">
+        <view class="bt">
+          {{vo.name}}
+        </view>
+        <view class="name">{{vo.summary}}</view>
+        <view class="prices">￥{{vo.price}}</view>
+      </view>
+    </navigator>
+    <!-- <view class="nun">
+      <image src="{{globalData.static_domain}}del.png" catchtap="del" data-key="{{key}}" id="{{vo.id}}"  mode="widthFix"/>
+    </view> -->
+  </view>
+  </block>
+</view>
+
+<view wx:if="{{view.res == ''}}">
+<import src="../../templates/header/header.wxml"/>
+<template is="nothing"/>
+</view>

@@ -1,0 +1,91 @@
+/* pages/carlist/carlist.wxss */
+
+.orders{
+	width: 95%;
+	overflow: hidden;
+	margin: 11.25rpx auto;
+}
+
+.orders .aa{
+	width: 98%;
+	overflow: hidden;
+	border: 1px solid #E5E5E5;
+	border-radius: 5px;
+	padding: 22.5rpx 0;
+	margin: 11.25rpx auto;
+	background-color: white;
+}
+
+.orders .aa .wlstate{
+	width:95%;
+	margin-left:2.5%;
+  font-size: 26.25rpx;
+}
+
+.orders .aa .wlstate text{
+	color:red;
+}
+
+.orders .aa .single{
+	width:100%;
+	overflow:hidden;
+	margin-top:11.25rpx;
+}
+
+.orders .aa .omg{
+	width: 112.5rpx;
+	height: 112.5rpx;
+	border-radius: 5px;
+	overflow: hidden;
+	float: left;
+	margin: 13.5rpx 13.5rpx;
+	border: 1px solid #E5E5E5;
+}
+
+.orders .aa .omg image{
+	width: 100%;
+}
+
+.orders .aa .inf{
+	width: 75%;
+	float: right;
+	overflow: hidden;
+}
+
+.orders .aa .inf .nns{
+	font-size: 26.25rpx;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top:11.25rpx;
+}
+
+.orders .aa .inf .prize,.orders .aa .how{
+	text-align: right;
+	margin-top: 15rpx;
+}
+
+.orders .aa .inf .prize .sl{
+	color: #c3c3c3;
+	margin-right: 112.5rpx;
+  font-size: 26.25rpx;
+}
+
+.orders .aa .inf .prize .hh{
+	color: #ff5044;
+	margin-right: 37.5rpx;
+  font-size: 26.25rpx;
+}
+
+.orders .aa  .how text{
+	display: inline-block;
+	height: 52.5rpx;
+	padding: 0 11.25rpx;
+	border-radius: 56.25rpx;
+	line-height: 52.5rpx;
+	font-size: 22.5rpx;
+	width: 112.5rpx;
+	text-align: center;
+}

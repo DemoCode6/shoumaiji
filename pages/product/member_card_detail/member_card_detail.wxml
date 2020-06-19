@@ -1,0 +1,41 @@
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="wrap">
+  <view class="card_wrap" catchtap="card_xq">
+    <image src="{{globalData.img_domain}}/compress/{{res.img}}"></image>
+  </view>
+
+  <view class="card_content_Wrap">
+    <view class="card_content">
+      <text>名称</text>
+      <text>{{res.name}}</text>
+    </view>
+    <view class="card_content">
+      <text>有效时长</text>
+      <text>一年</text>
+    </view>
+  </view>
+
+  <view class="card_content_Wrap">
+    <view class="Explain">说明</view>
+    <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+  </view>
+</view>
+
+<view style="width:100%;height:100rpx;opacity:0;">占位</view>
+<view class="submit_wrap">
+  <view class="submit_price">需支付
+    <text>¥{{res.price}}</text>
+  </view>
+  <view class="dobuy" catchtap="buy">立即购买</view>
+</view>
+
+<view class="tan_mask" wx:if="{{tanHidd}}" catchtap='tan_quxiao'></view>
+<view class='tan_wrap' wx:if="{{tanHidd}}">
+  <view class='tan_title_wrap'>请选择店铺</view>
+  <view style='width:100%;height:80rpx;'></view>
+  <view class='jiaru_auto'>
+    <block wx:for="{{dianpu}}" wx:for-index="key" wx:for-item="vo">
+      <view class='jiaru_wrap' catchtap="select_dianpu" id="{{vo.id}}" data-name="{{vo.name}}">{{vo.name}}<text style="float:right">选择</text></view>
+    </block>
+  </view>
+</view>

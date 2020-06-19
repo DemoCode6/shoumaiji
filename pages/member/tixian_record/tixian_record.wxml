@@ -1,0 +1,36 @@
+<view class="jf" style="background: url({{globalData.static_domain}}jxa.png)no-repeat;background-size: 100% 100%;">
+  <view class="bta">当前金额：</view>
+  <view class="cir">
+    <view>{{view.money}}
+      <text style="font-size:67.5rpx;color: white;">元</text>
+    </view>
+  </view>
+</view>
+<view class="bnts">
+  <navigator hover-class="none" url='/pages/member/tixian/tixian'>我要提现</navigator>
+</view>
+<view class="record {{is_liushui == 1 ? 'foccc' : ''}}" style="margin-top: 22.5rpx;" catchtap="change_liushui" id="1">资金流水</view>
+<view class="record {{is_liushui == 0 ? 'foccc' : ''}}" style="margin-top: 22.5rpx;" catchtap="change_liushui" id="0">提现记录</view>
+<view style="clear:both;"></view>
+<view style="width:95%;margin-left:2.5%;" wx:if="{{is_liushui == 1}}">
+  <block wx:for="{{view.liushui}}" wx:for-index="key" wx:for-item="vo">
+    <view style="line-height: 60rpx;border-bottom: 1px solid #ebebeb;height: 130rpx;">
+      <view style="color: #7c7c7c;">{{vo.date}}</view>
+      <view style="width: 40%;float: left;font-size:33rpx;">{{vo.money}}元</view>
+      <view style="width: 60%;float: left;text-align: right;">{{vo.summary}}</view>
+    </view>
+  </block>
+</view>
+
+<view class="txrecords" wx:if="{{is_liushui == 0}}">
+  <block wx:for="{{view.record}}" wx:for-index="key" wx:for-item="vo">
+    <view>
+      <text class="tat">{{vo.tixian_date}}</text>
+      <text class="tbt">{{vo.money}}元</text>
+      <text class="tct">{{vo.status == 1 ? '已提现' : '审核中'}}</text>
+    </view>
+  </block>
+</view>
+
+<!-- <import src="../../templates/footer/footer.wxml" />
+<template is="footer" data="{{footer}}" /> -->

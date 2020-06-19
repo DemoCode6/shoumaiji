@@ -1,0 +1,107 @@
+{
+  "pages": [
+    "pages/product/index/index",
+    "pages/product/xilie/xilie",
+    "pages/product/kuaijie/kuaijie",
+    "pages/product/detail/detail",
+    "pages/product/pingjia/pingjia",
+    "pages/product/buy/buy",
+    "pages/product/address_add/address_add",
+    "pages/product/address_edit/address_edit",
+    "pages/product/login/login",
+    "pages/product/aboutus/aboutus",
+    "pages/product/hezuo/hezuo",
+    "pages/product/news/news",
+    "pages/product/news_detail/news_detail",
+    "pages/product/jianjie/jianjie",
+    "pages/product/wenda_list/wenda_list",
+    "pages/product/duibi/duibi",
+    "pages/product/member_card/member_card",
+    "pages/product/member_card_detail/member_card_detail",
+    "pages/product/dianyuan_saoma/dianyuan_saoma",
+    "pages/product/chanpin_hexiao/chanpin_hexiao",
+    
+    "pages/member/index/index",
+    "pages/member/orderlist/orderlist",
+    "pages/member/p_order_d/p_order_d",
+    "pages/member/member/member",
+    "pages/member/address/address",
+    "pages/member/address_add/address_add",
+    "pages/member/address_edit/address_edit",
+    "pages/member/gwc/gwc",
+    "pages/member/cj_order/cj_order",
+    "pages/member/dai_shouyi/dai_shouyi",
+    "pages/member/product_liulan/product_liulan",
+    "pages/member/product_shoucang/product_shoucang",
+    "pages/member/product_buy/product_buy",
+    "pages/member/kehu/kehu",
+    "pages/member/youhuiquan/youhuiquan",
+    "pages/member/pl/pl",
+    "pages/member/zp/zp",
+    "pages/member/ypj/ypj",
+    "pages/member/jifen_shop/jifen_shop",
+    "pages/member/jfshop_detail/jfshop_detail",
+    "pages/member/jifen/jifen",
+    "pages/member/tuihuo/tuihuo",
+    "pages/member/wuliu/wuliu",
+    "pages/member/thz/thz",
+    "pages/member/thok/thok",
+    "pages/member/tixian_record/tixian_record",
+    "pages/member/tixian/tixian",
+    "pages/member/txok/txok",
+    "pages/member/youhuiquan_center/youhuiquan_center",
+    "pages/member/edit_user/edit_user",
+    "pages/member/code/code",
+    "pages/member/jifen_order/jifen_order",
+    "pages/member/my_cards/my_cards",
+    "pages/member/my_cards_detail/my_cards_detail",
+    "pages/member/huiyuan/huiyuan",
+    "pages/member/chongzhi/chongzhi"
+
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "无忧智慧城",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#ff513e",
+    "list": [
+      {
+        "pagePath": "pages/product/index/index",
+        "text": "首页",
+        "iconPath": "/pages/images/s1.png",
+        "selectedIconPath": "/pages/images/s2.png"
+      },
+      {
+        "pagePath": "pages/product/xilie/xilie",
+        "text": "售卖机",
+        "color": "yellow",
+        "iconPath": "/pages/images/smj1.png",
+        "selectedIconPath": "/pages/images/smj2.png"
+      },
+      {
+        "pagePath": "pages/product/kuaijie/kuaijie",
+        "text": "物料中心",
+        "color": "yellow",
+        "iconPath": "/pages/images/c1.png",
+        "selectedIconPath": "/pages/images/c2.png"
+      },
+      {
+        "pagePath": "pages/member/gwc/gwc",
+        "text": "购物车",
+        "iconPath": "/pages/images/g1.png",
+        "selectedIconPath": "/pages/images/g2.png"
+      },
+      {
+        "pagePath": "pages/member/index/index",
+        "text": "个人中心",
+        "iconPath": "/pages/images/m11.png",
+        "selectedIconPath": "/pages/images/m22.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+<form bindsubmit="formSubmit">
+  <view class="send">
+    <text class="tot">收货人:</text>
+    <input type="text" class="inpot" name="name" id="name" value='{{view.res.name}}'></input>
+    <!-- <img src="__STATIC__/index/img/jg.png" class="ts" /> -->
+  </view>
+  <view class="send">
+    <text class="tot">联系电话:</text>
+    <input type="tel" class="inpot" name="phone" id="phone" value='{{view.res.phone}}'></input>
+    <!-- <img src="__STATIC__/index/img/jg.png" class="ts"/> -->
+  </view>
+  <view class="send" style="height: 200rpx;padding: 11.25rpx 0;">
+    <text class="tot">收货地址:</text>
+    <!-- <img src="__STATIC__/index/img/jg.png" class="ts"/> -->
+    <view style="width: 65%;height: 75rpx;float: left;border: 1px solid #f5f5f5;border-radius: 5px;margin-left: 1%;margin-bottom: 0.15rem;">
+      <input placeholder="选择" style="color: #686868;line-height: 75rpx;width:90%;margin-left:5%;height:75rpx;" value="{{province}} {{city}} {{county}}" focus="{{focus}}" bindtap="open" disabled='disabled' />
+    </view>
+    <view style="clear: both;width: 100%;overflow: hidden;">
+      <text class="tot">详细地址:</text>
+      <view style="text-align:center;height: 2.5rem;" class="odivs">
+        <textarea type="text" name="address_detail" id="address_detail" style="resize: none;width: 100%;outline: none;line-height: 52.5rpx;text-align:left;height:75rpx;" value='{{view.res.address_detail}}'></textarea>
+      </view>
+    </view>
+  </view>
+  <view class="mr" catchtap="moren">
+    <text class="text">设为默认地址</text>
+    <text class="cir">
+      <text class="sx" wx:if="{{is_moren}}" ></text>
+    </text>
+  </view>
+
+  <view class="bnts" style="margin-top: 75rpx;">
+
+    <button type="button" id="sub" form-type="submit">保存</button>
+  </view>
+</form>
+
+<view class='mask' wx:if="{{condition}}">
+  <view class="citypicker">
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="citybody">
+      <view class="cityheader">
+        <view bindtap="open" class="city-cancel">取消</view>
+        <view bindtap="open" class="city-true">确定</view>
+      </view>
+      <picker-view-column>
+        <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>
+
+<!-- <import src="../../templates/footer/footer.wxml"/>
+<template is="footer" data="{{footer}}"/> -->

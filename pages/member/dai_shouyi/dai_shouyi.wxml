@@ -1,0 +1,45 @@
+<block wx:for="{{view.res}}" wx:for-index="key" wx:for-item="vo">
+  <view class="orders">
+    <view class='aa'>
+      <view style="height: 75rpx; width: 75rpx;border-radius: 50%;float: left;margin-left: 2.5%;overflow: hidden;">
+        <image src="{{globalData.img_domain}}/{{vo.getmember.img}}" style="width: 100%;" mode="widthFix" />
+      </view>
+      <view class="nunmber" style="float: left;margin-left: 15rpx;width: 75%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;line-height: 75rpx;">{{vo.getmember.name}}</view>
+      <view class="wlstate" style='clear:both;width:100%;'>下单时间：{{vo.pay_date}}</view>
+      <view class="wlstate" style='clear:both;width:100%;'>订单编号：{{vo.order_number}}</view>
+      <block wx:for="{{vo.getdetail}}" wx:for-index="kk" wx:for-item="vv">
+        <view class="single">
+          <navigator hover-class="none" url="/pages/product/detail/detail?id={{vv.getproduct.id}}" class="omg">
+            <image src="{{globalData.img_domain}}/{{vv.getproduct.img}}" mode="widthFix"></image>
+          </navigator>
+          <view class="inf">
+            <navigator hover-class="none" url="/pages/product/detail/detail?id={{vv.getproduct.id}}" class="nns">
+              <text>{{vv.getproduct.name}}</text>
+            </navigator>
+            <navigator hover-class="none" url="/pages/product/detail/detail?id={{vv.getproduct.id}}" class="nns">
+              <text>{{vv.mingzhi}}</text>
+            </navigator>
+            <view class="prize">
+              <text class="sl">x{{vv.number}}</text>
+              <text class="hh">￥{{vv.total}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+      <view class="wlstate">交易金额：
+        <text>{{vo.total}}元</text>
+      </view>
+      <view class="wlstate">获得收益：
+        <text>{{vo.shouyi.number > 0 ? vo.shouyi.number : '0.00'}}元</text>
+      </view>
+      <view class="wlstate" wx:if="{{vo.member_id == globalData.user_msg.id}}">获得积分：
+        <text>{{vo.jifen}}分</text>
+      </view>
+    </view>
+  </view>
+</block>
+
+<view wx:if="{{view.res == ''}}">
+<import src="../../templates/header/header.wxml"/>
+<template is="nothing"/>
+</view>

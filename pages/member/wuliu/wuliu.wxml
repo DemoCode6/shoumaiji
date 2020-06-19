@@ -1,0 +1,23 @@
+<view class="states">
+  <view>{{view.res.kuaidi_name}}</view>
+  <view>快递单号：{{view.res.kuaidi_number}}</view>
+</view>
+<view class="lc">
+  <block wx:if="{{view.kuaidi_msg.status == 0}}">
+    <block wx:for="{{view.kuaidi_msg.result.list}}" wx:for-item="vo">
+      <view class="one">
+        <view class="ll">
+          <text class="circle"></text>
+          <view></view>
+        </view>
+        <view class="rr">
+          <view class="inforr">{{vo.status}}</view>
+          <view class="time">{{vo.time}}</view>
+        </view>
+      </view>
+    </block>
+  </block>
+</view>
+
+<!-- <import src="../../templates/footer/footer.wxml" />
+<template is="footer" data="{{footer}}" /> -->

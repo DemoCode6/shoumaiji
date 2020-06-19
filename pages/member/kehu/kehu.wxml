@@ -1,0 +1,70 @@
+<!--pages/kehu/kehu.wxml-->
+<view class="lesson">
+  <view class="lla">
+    <view style="">我的客户</view>
+  </view>
+</view>
+<view class="cust">
+  <view class="customer" style="display: block;">
+    <block wx:for="{{view.res}}" wx:for-index="key" wx:for-item="vo">
+      <view class="ones">
+        <view class="topa">
+          <view class="photo">
+            <image src="{{globalData.img_domain}}/{{vo.img}}" mode="widthFix" />
+          </view>
+          <view class='ops'>
+            <text class="lle">{{vo.name}}</text>
+            <navigator hover-class="none" style='display:inline-block;margin-left:20rpx;'>
+              <image catchtap="phonecallevent" data-phone='{{vo.phone}}' style="display: inline-block;width: 33.75rpx;" src="{{globalData.static_domain}}phone.png" mode="widthFix" />
+            </navigator>
+          </view>
+          <image src="{{globalData.static_domain}}download.png" id='{{key}}' style="float: left;width:40rpx;" class="{{className}}" mode="widthFix" bindtap='click' />
+        </view>
+        <view class="gga">
+          <view>
+            成交收益：
+            <text>{{vo.shouji}}元</text>
+          </view>
+          <view>
+            成交金额：
+            <text>{{vo.buy_money}}元</text>
+          </view>
+        </view>
+        <block wx:if="{{vo.showHidde}}">
+          <block wx:for="{{vo.xiaji}}" wx:for-index="key" wx:for-item="vv">
+            <view class="xiashu" style="background-color: #F2F2F2; padding-top: 0.15rem; padding-bottom: 0.15rem;">
+              <view class="ones">
+                <view class="topa">
+                  <view class="photo">
+                    <image src="{{globalData.img_domain}}/{{vv.img}}" mode="widthFix" />
+                  </view>
+                  <view class='names'>
+                    <text class="lle">{{vv.name}}</text>
+                    <navigator hover-class="none" style='display:inline-block;margin-left:20rpx;'>
+                      <image catchtap="phonecallevent" data-phone='{{vv.phone}}' style="display: inline-block;width: 33.75rpx;" src="{{globalData.static_domain}}phone.png" mode="widthFix" />
+                    </navigator>
+                  </view>
+                </view>
+                <view class="gga">
+                  <view>
+                    成交收益：
+                    <text>{{vv.shouyi ? vv.shouyi : 0}}元</text>
+                  </view>
+                  <view>
+                    成交金额：
+                    <text>{{vv.buy_money}}元</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </block>
+        </block>
+      </view>
+    </block>
+  </view>
+</view>
+
+<view wx:if="{{view.res == ''}}">
+<import src="../../templates/header/header.wxml"/>
+<template is="nothing"/>
+</view>

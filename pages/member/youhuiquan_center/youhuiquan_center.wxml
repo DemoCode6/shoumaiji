@@ -1,0 +1,27 @@
+<view class="yhq_con" style="margin-top: 90rpx;">
+  <block wx:for="{{view.res}}" wx:for-index="key" wx:for-item="vo">
+  <view class="one">
+    <view>
+      <view class="yhq">
+        <view class="img_pro">
+          <image src="{{globalData.static_domain}}timg2.jpg" mode="widthFix"/>
+        </view>
+        <view class="yhqxx">
+          <view class="mj">￥ <text>{{vo.type == 1 ? vo.price : '满'+vo.price[0]+'元减'+vo.price[1]+'元' }}</text></view>
+          <view class="nn">{{vo.name}}</view>
+          <view class="nn">有效期至{{vo.expire_date}}</view>
+        </view>
+      </view>
+      <view class="use">
+        <text wx:if="{{vo.use_status == -1}}" style="background:#ff5637;" catchtap='lingqu' id='{{vo.id}}'>领取</text>
+        <text wx:if="{{vo.use_status != -1}}" style="background:#3f3f3f;">已领取</text>
+      </view>
+    </view>
+  </view>
+  </block>
+</view>
+
+<view wx:if="{{view.res == ''}}">
+<import src="../../templates/header/header.wxml"/>
+<template is="nothing"/>
+</view>

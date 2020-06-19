@@ -1,0 +1,24 @@
+<!--pages/member/member.wxml-->
+<navigator hover-class="none" url='/pages/member/edit_user/edit_user?type=name' class="send">
+    <text class="tot">姓名:</text>
+    <text class="rr">{{view.res.name}}</text>
+    <image src="{{globalData.static_domain}}rr.png" class="to" mode="widthFix"></image>
+</navigator>
+<navigator hover-class="none" url='/pages/member/edit_user/edit_user?type=summary' class="send">
+    <text class="tot">签名:</text>
+    <text class="rr">{{view.res.summary}}</text>
+    <image src="{{globalData.static_domain}}rr.png" class="to" mode="widthFix"></image>
+</navigator>
+<navigator hover-class="none" url='/pages/member/edit_user/edit_user?type=phone' class="send">
+    <text class="tot">修改手机号:</text>
+    <text class="rr">{{view.res.phone}}</text>
+    <image src="{{globalData.static_domain}}rr.png" class="to" mode="widthFix"></image>
+</navigator>
+<navigator hover-class="none" class="send" url='/pages/member/address/address'>
+    <text class="tot">管理收获地址</text>
+    <text class="rr"></text>
+    <image src="{{globalData.static_domain}}rr.png" class="to" mode="widthFix"></image>
+</navigator>
+
+<!-- <import src="../../templates/footer/footer.wxml"/>
+<template is="footer" data="{{footer}}"/> -->

@@ -1,0 +1,27 @@
+<view class="jf" style="background: url({{globalData.static_domain}}jxa.png)no-repeat;background-size: 100% 100%;">
+  <view class="bta">当前金额：</view>
+  <view class="cir">
+    <view>{{globalData.user_msg.account}}
+      <text style="font-size:67.5rpx;color: white;">元</text>
+    </view>
+  </view>
+</view>
+<view class="jine">
+
+  <block wx:for="{{chuzhi_card}}" wx:for-index="key" wx:for-item="vo">
+    <view class="kuai" catchtap="pay_money" id="{{vo.id}}">
+      <view class="price">{{vo.money}}元</view>
+      <view class="sale">实际到账{{vo.shiji_money}}元</view>
+    </view>
+  </block>
+</view>
+<view>
+  <view style="font-size: 38rpx;text-align: center;color: #666;">储值记录</view>
+  <block wx:for="{{chuzhi_card_order}}" wx:for-index="key" wx:for-item="vo">
+    <view style="line-height: 50rpx;color: #666;border-bottom: 1px solid #e1e1e1;width: 90%;margin: 0 auto;">
+      <view>{{vo.pay_date}}</view>
+      <view>缴费金额:{{vo.money}}元</view>
+      <view>到账金额:{{vo.shiji_money}}元</view>
+    </view>
+  </block>
+</view>

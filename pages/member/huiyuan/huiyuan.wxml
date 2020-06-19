@@ -1,0 +1,10 @@
+<import src="../../../wxParse/wxParse.wxml"/>
+<view class="newsdetail">
+  <view class='container'>
+    <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+  </view>
+</view>
+
+<view class="pay" wx:if="{{globalData.user_msg.is_huiyuan == 0}}">
+  <button style="position: fixed;bottom: 20rpx;left: 10%;background-color: #FF5933;text-align: center;color: #fff;width:80%;" class="btnpay" catchtap="pay_money">立即成为会员</button>
+</view>

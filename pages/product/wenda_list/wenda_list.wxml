@@ -1,0 +1,12 @@
+<view class="wrap">
+  <block wx:for="{{list}}">
+    <view class="message_list" catchtap="open" data-index="{{index}}">
+      <view>问：{{item.title}}</view>
+      <text class="iconfont {{item.check?'icon-arrow-down':'icon-jiantou-copy'}}"></text>
+      <view style="clear:both"></view>
+      <view class="huida_wrap" wx:if="{{item.check?true:false}}">
+        答： {{item.content}}
+      </view>
+    </view>
+  </block>
+</view>

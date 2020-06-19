@@ -1,0 +1,351 @@
+/**index.wxss**/
+
+.cu-modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.bg-imgs {
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.hb-text {
+  padding-top: 10px;
+  color: red;
+}
+
+.xx {
+  float: right;
+  padding-right: 15px;
+  color: white;
+}
+
+.cu-modal.show {
+  opacity: 1;
+  transition-duration: 0.3s;
+  -ms-transform: scale(1);
+  transform: scale(1);
+  overflow-x: hidden;
+  overflow-y: auto;
+  pointer-events: auto;
+}
+
+.cu-dialog {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  margin-top: 172rpx;
+}
+
+.store {
+  width: 750rpx;
+  height: 100rpx;
+}
+
+.shop {
+  float: left;
+  padding: 30rpx 35rpx;
+  font-size: 25rpx;
+}
+
+.search {
+  float: right;
+  width: 530rpx;
+  height: 52rpx;
+  background: #eaeaea;
+  border-radius: 20rpx;
+  margin-top: 30rpx;
+  margin-right: 30rpx;
+}
+
+.search image {
+  float: left;
+  display: block;
+  width: 25rpx;
+  height: 25rpx;
+  margin-top: 15rpx;
+  margin-left: 15rpx;
+}
+
+.font {
+  float: left;
+  color: #666;
+  padding: 10rpx 15rpx;
+  font-size: 22rpx;
+}
+
+.banner swiper {
+  width: 100%;
+  height: 360rpx;
+}
+
+.banner image {
+  width: 100%;
+  height: 360rpx;
+}
+
+.pic image {
+  width: 100%;
+  height: 190rpx;
+}
+
+.xinpin {
+  width: 750rpx;
+  height: 80rpx;
+  background: white;
+}
+
+.tuijian {
+  float: left;
+  font-weight: bold;
+  padding: 20rpx 15rpx;
+  font-size: 30rpx;
+}
+
+.more {
+  float: right;
+  padding: 20rpx 15rpx;
+  color: #999;
+  font-size: 22rpx;
+}
+
+.column {
+  width: 750rpx;
+  border-bottom: 18rpx solid #f0eff4;
+}
+
+.price {
+  color: #c74f54;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+
+.book {
+  width: 33.33%;
+  height: 305rpx;
+  line-height: 45rpx;
+  margin-bottom: 20rpx;
+  float: left;
+}
+
+.book image {
+  display: block;
+  width: 150rpx;
+  height: 180rpx;
+  margin: 0 auto;
+}
+
+.book text {
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  display: block;
+  font-size: 24rpx;
+  width: 100%;
+  height: 90rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-align: center;
+}
+
+.heng {
+  border-bottom: 18rpx solid #f0eff4;
+}
+
+.heng .pingfan:last-child {
+  border: none;
+}
+
+.pingfan {
+  width: 750rpx;
+  height: 260rpx;
+  border-bottom: 1rpx solid #eaeaea;
+  position: relative;
+}
+
+.pingfan image {
+  float: left;
+  width: 150rpx;
+  height: 180rpx;
+  margin-top: 30rpx;
+  margin-left: 50rpx;
+}
+
+.pingfan text {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height: 90rpx;
+  line-height: 45rpx;
+}
+
+.middle {
+  float: left;
+  padding-left: 50rpx;
+  padding-top: 30rpx;
+  width: 65%;
+  position: relative;
+}
+
+.yuanjia {
+  color: #c52a32;
+  padding-top: 40rpx;
+  font-size: 24rpx;
+}
+
+.goumai {
+  float: right;
+  width: 220rpx;
+  height: 60rpx;
+  border-radius: 5px;
+  background: #c52a32;
+  line-height: 60rpx;
+  color: #fff;
+  text-align: center;
+  margin-right: 30rpx;
+  margin-top: 170rpx;
+  font-size: 24rpx;
+  position: absolute;
+  bottom: 28rpx;
+  right: 24rpx;
+}
+
+.sale {
+  color: #999;
+  padding-top: 20rpx;
+  font-size: 22rpx;
+  text-decoration: line-through;
+}
+
+.ren {
+  width: 750rpx;
+  height: 260rpx;
+}
+
+.ren image {
+  float: left;
+  width: 150rpx;
+  height: 180rpx;
+  margin-top: 30rpx;
+  margin-left: 50rpx;
+}
+
+.zonghe{
+  width:100%;
+  display: flex;
+  white-space: nowrap;
+  border-bottom: 18rpx solid #f0eff4; 
+}
+.jiaoyu{
+  display: inline-block;
+  width: 230rpx;
+  line-height: 45rpx;
+  position: relative;
+}
+.jiaoyu image{
+  display: block;
+  width: 150rpx;
+  height: 180rpx;
+  margin: 0 auto;
+}
+.jiaoyu text{
+  display: block;
+  font-size: 24rpx;
+  width: 100%;
+  height: 90rpx;
+  text-overflow: -o-ellipsis-lastline;
+  line-clamp: 2;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-align: center;
+}
+
+.int_foot{
+width:100%;
+overflow:hidden;
+height:115rpx;
+background-color: white;
+border-top: 1px solid #e1e1e1;
+padding-top: 20rpx;
+padding-bottom: 30rpx;
+}
+
+.int_foot .foot_one{
+width: 25%;
+float: left;
+height: 100%;
+text-align: center;
+}
+
+.int_foot .foot_one image{
+width:100rpx;
+height: 100rpx;
+}
+
+.int_foot .foot_one navigator{
+display: block;
+width: 100%;
+height: 100%;
+}
+
+.int_foot .foot_one navigator view{
+width: 100%;
+height: 84rpx;
+overflow: hidden;
+margin-bottom: 15rpx;
+}
+
+.int_foot .foot_one navigator view image{
+width: 80rpx;
+height: auto;
+margin-top: 5rpx;
+}
+
+.int_foot .foot_one navigator view text{
+line-height: 30rpx;
+}
+
+
+.one_gg navigator {
+  width: 100%;
+}
+
+.two_gg navigator {
+  width: 50%;
+  float: left;
+}
+
+.three_gg navigator {
+  width: 33.33%;
+  float: left;
+}
+
+.four_gg navigator {
+  width: 25%;
+  float: left;
+}
+
+.five_gg navigator {
+  width: 20%;
+  float: left;
+}

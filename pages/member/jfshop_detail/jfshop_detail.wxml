@@ -1,0 +1,77 @@
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="address" wx:if="{{!address}}">
+  <navigator hover-class="none" class="addb" url='/pages/member/address_add/address_add?id={{view.id}}'>
+    <image src="{{globalData.static_domain}}address.png" class="adda" mode='widthFix' />
+    <text>添加收货地址</text>
+    <image src="{{globalData.static_domain}}bor.png" class="imgbor" mode='widthFix' />
+  </navigator>
+</view>
+
+<view class="address" wx:if="{{address}}">
+  <view class="lefts">
+    <view class="people">
+      <text>收货人：{{address.name}}</text>
+      <text style="text-align: right;">{{address.phone}}</text>
+    </view>
+    <view class="place">
+      收货地址：{{address.address}} {{address.address_detail}}
+    </view>
+  </view>
+  <navigator hover-class="none" class="changes" url='/pages/member/address_edit/address_edit?shop_id={{view.id}}&id={{address.id}}'>
+    <image src="{{globalData.static_domain}}change.png" mode='widthFix' />
+  </navigator>
+  <image src="{{globalData.static_domain}}bor.png" class="imgbor" mode='widthFix' />
+</view>
+
+<view class="infor">
+  <view class="nunp product" idd="{$vo.id}">
+    <view class="pict">
+      <image src="{{globalData.img_domain}}/{{view.img}}" mode='widthFix' />
+    </view>
+    <view class="namea">
+      <view class="proname">产品名称</view>
+      <view class="state">{{view.name}}</view>
+      <view style="margin-top: 0.8rem;">
+        <text class="prize">￥<text class="prize" id="price">{{view.price}}</text></text>
+        <text class="fh" catchtap='jia' style="float: right;">+</text>
+        <text type="number" style="float: right;" class='fhh'>{{number}}</text>
+        <text class="fh" catchtap='jian' style="float: right;">-</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="nunp">
+    <text class="llef">配送方式</text>
+    <text class="rrig">普通快递</text>
+  </view>
+  <view class="nunp" bindtap='clickMe'>
+    <text class="llef">产品详情</text>
+    <text class="rrig">></text>
+  </view>
+  <view class="nunp" wx:if="{{xiangqing}}">
+    <view class="lessjj">
+      <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+    </view>
+    <view class="llef" style='text-align:center;width:100%;' bindtap='clickMe'>收起^</view>
+  </view>
+
+  
+  <view class="nunp" style="border: none;">
+    <text class="llef">卖家留言</text>
+    <textarea bindinput="liuyan" name="liuyan" placeholder="有什么需求可以在这里留言"></textarea>
+  </view>
+</view>
+<view class="total">
+  <text>共计<text class='red'>{{number}}</text>件商品</text>
+  <text>小计：<text class='red'>￥<text id="total">{{total}}</text></text>
+  </text>
+</view>
+
+<view class="pay">
+  <button class="btnpay" catchtap="pay_money">确认支付</button>
+  <text class="all">合计金额：<text class="mm">￥<text class="mm" id="total1">{{total}}</text></text>
+  </text>
+</view>
+<!-- 
+<import src="../../templates/footer/footer.wxml"/>
+<template is="footer" data="{{footer}}"/> -->

@@ -1,0 +1,110 @@
+/* pages/kehu/kehu.wxss */
+.lesson{
+	width: 100%;
+	overflow: hidden;
+	 margin-top: 22.5rpx;
+	/* margin-bottom: 1rem; */
+	background-color: #fff;
+
+}
+
+.lesson .lla{
+	width: 95%;
+	margin-left: 2.5%;
+	overflow: hidden;
+	background-color: white;
+	padding-top: 11.25rpx;
+}
+
+.lesson .lla view{
+	width: 48.5%;
+	float: left;
+	/* text-align: center; */
+	line-height:52.5rpx;
+	font-weight: 600;
+	font-size:30rpx;
+}
+
+.customer{
+	width: 95%;
+	overflow: hidden;
+	margin: 30rpx auto 37.5rpx auto;
+	border: 1px solid #E5E5E5;
+	border-radius: 4px;
+	padding: 11.25rpx 0;
+	display: none;
+}
+
+.customer .ones{
+	width: 95%;
+	margin-left: 2.5%;
+	overflow: hidden;
+	border: 1px solid #E5E5E5;
+	border-radius: 5px;
+	margin-bottom: 11.25rpx;
+	background-color: white;
+}
+
+.customer .ones .gga{
+	width: 95%;
+	margin-left: 2.5%;
+	overflow: hidden;
+	margin:11.25rpx auto;
+}
+
+.customer .ones .gga view{
+	color: #868686;
+	font-size: 28.5rpx;
+}
+
+.customer .ones .gga view text{
+	color: #ff5834;
+}
+
+.customer .ones .topa{
+	width: 95%;
+	margin-left: 2.5%;
+	margin-top: 11.25rpx;
+	overflow: hidden;
+}
+
+.customer .ones .topa .photo{
+	width: 75rpx;
+	height: 75rpx;
+	border-radius: 50%;
+	overflow: hidden;
+	float: left;
+}
+
+.customer .ones .topa .photo image{
+	width: 100%;
+	height: 100%;
+}
+
+.customer .ones .topa .names{
+  width: 70%;
+  float: left;
+  margin-left: 20rpx;
+  line-height: 75rpx;
+}
+
+.customer .ones .topa .ops{
+	line-height: 75rpx;
+	width: 80%;
+	float: left;
+	margin-left: 11.25rpx;
+}
+
+.customer .ones .topa .ops .lle{
+	font-size: 28.5rpx;
+}
+
+.customer .ones .topa .ops .tjr{
+	font-size: 60rpx;
+	margin-left: 75rpx;
+	color: #828282;
+}
+
+.rote{
+  transform: rotate(180deg);
+}

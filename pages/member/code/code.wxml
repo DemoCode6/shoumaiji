@@ -1,0 +1,14 @@
+<view  bindtap="getImageInfo" class='code' style='background: url({{globalData.img_domain}}/{{gsxx.erweima_beijing}})no-repeat;background-size: 100% 100%;'>
+  <view class='logo_con'>
+    <image src="{{globalData.img_domain}}/{{gsxx.logo}}" mode='aspectFit'></image>
+  </view>
+  <view class='logo_con'>
+    <image src="{{globalData.img_domain}}/{{globalData.user_msg.img}}" style='border-radius: 50%;width:150rpx;height:150rpx;' mode='aspectFit'></image>
+  </view>
+  <view class='ll'>我是：{{globalData.user_msg.name}}</view>
+  <view class='ll'>我为{{gsxx.name}}代言</view>
+  <view class='code_cont'>
+    <image src="{{globalData.img_domain}}/{{img}}" mode='aspectFit'></image>
+  </view>
+  <text class='tip'>点击长按识别二维码</text>
+</view>

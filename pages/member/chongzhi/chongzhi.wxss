@@ -1,0 +1,182 @@
+.jf{
+	width: 100%;
+	height: 187.5rpx;
+	background: url(../img/jxx.png)no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+
+
+.jf .bta{
+	position: absolute;
+	left: 22.5rpx;
+	top: 22.5rpx;
+	color: white;
+	font-size: 30rpx;
+}
+
+.jf .cir{
+	width: 112.5rpx;
+	height: 112.5rpx;
+	border: 1px solid #fff;
+	text-align: center;
+	line-height: 112.5rpx;
+	margin: 52.5rpx auto;
+	border-radius: 50%;
+}
+
+.jf .cir view{
+	font-size:37.5rpx;
+	color: white;
+}
+
+.record{
+	text-align: center;
+	line-height: 80rpx;
+	font-size: 30rpx;
+	margin: 15rpx 0;
+  width: 50%;
+  float:left;
+  height: 80rpx;
+}
+
+.foccc{
+  background-color: #00B26A;
+  color: #fff;
+}
+
+.txrecords,.records{
+	width: 95%;
+	margin-left: 2.5%;
+	overflow: hidden;
+}
+
+.records li{
+	width: 100%;
+	height: 97.5rpx;
+	border-bottom: 1px solid #ebebeb;
+	background-color: white;
+	padding-top: 11.25rpx;
+}
+
+.records li .left{
+	width: 70%;
+	height: 100%;
+	float: left;
+}
+
+.records li .nuns{
+	width: 30%;
+	height: 100%;
+	float: left;
+	text-align: right;
+	line-height: 112.5rpx;
+	color: #ff4e42;
+	font-size: 37.5rpx;
+}
+
+.records li .left .lj{
+	font-size: 30rpx;
+	color: #747474;
+	margin-bottom: 11.25rpx;
+}
+
+.records li .left .time{
+	font-size: 26.25rpx;
+	color: #bababa;
+	margin-bottom: 11.25rpx;
+}
+
+.shuru{
+  width: 95%;
+	height: 75rpx;
+  text-align: center;
+  margin: 0 auto;
+}
+.shuru input{
+  width: 100%;
+  height: 100%;
+}
+
+.jine{
+  width: 100%;
+  height: 310rpx;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40rpx;
+}
+
+.kuai{
+  width: 220rpx;
+  height: 125rpx;
+  border: 1rpx solid #00B26A;
+  border-radius: 10rpx;
+  text-align: center;
+  color: #00B26A;
+}
+.price{
+  font-size: 30rpx;
+  line-height: 75rpx;
+}
+.sale{
+  font-size: 20rpx;
+}
+
+.bnts{
+	width: 95%;
+	height: 75rpx;
+	border-radius: 37.5rpx;
+	background-color: #ff5637;
+	margin-left: 2.5%;
+	overflow: hidden;
+	margin-top: 37.5rpx;
+}
+
+.bnts navigator{
+	width: 100%;
+	height: 100%;
+	background-color:#ff5637;
+	color: white;
+	border: none;outline: none;
+  font-size: 26.25rpx;
+  text-align: center;
+  line-height: 75rpx;
+}
+
+.txrecords view{
+	width: 100%;
+	height: 75rpx;
+	line-height: 75rpx;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.txrecords view .tat{
+	float: left;
+	font-size: 28.5rpx;
+	color: #7c7c7c;
+	display: block;
+	width: 50%;
+}
+
+
+.txrecords view .tbt{
+	float: left;
+	font-size: 30rpx;
+	color: #ff4e42;
+	display: block;
+	width: 30%;
+	text-align: center;
+}
+
+
+.txrecords view .tct{
+	float: right;
+	font-size: 28.5rpx;
+	color: #ff4e42;
+	display: block;
+	width: 20%;
+	text-align: right;
+}

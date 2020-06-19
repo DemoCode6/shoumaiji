@@ -1,0 +1,157 @@
+<!--index.wxml-->
+<!-- 弹框 -->
+<!-- <view class="cu-modal" wx:if="{{isHide}}">
+  <view class="cu-dialog">
+    <view class="bg-imgs" catchtap="youhuiquan_center" style="background-image: url('/pages/images/yhq11.png');">
+      <view class="cu-bar justify-end text-white">
+        <view class="action xx" catchtap="hideModal">
+          <icon type="clear"></icon>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="store">
+  <view class="shop">巫溪中心店</view>
+  <view class="search">
+    <image src="/pages/images/search.png"></image>
+    <view class="font">今天你想读点什么呢?</view>
+  </view>
+</view> -->
+<!-- 轮播 -->
+<view class="banner">
+  <swiper indicator-active-color="#fff" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item catchtap="jump1" data-url="{{item.url}}">
+        <view class="swiper-item">
+          <image src="{{globalData.img_domain}}/compress/{{item.img}}"></image>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class='int_foot'>
+  <view class='foot_one'>
+    <navigator hover-class="none" url='/pages/product/aboutus/aboutus?file_name=aboutus' hover-class='none'>
+      <view>
+        <image src="../../images/gywm.png" mode='widthFix'></image>
+      </view>
+      <text>关于我们</text>
+    </navigator>
+  </view>
+  <view class='foot_one'>
+    <navigator url="/pages/product/aboutus/aboutus?file_name=contactus" hover-class="none">
+      <view>
+        <image src="../../images/jmwm.png" mode='widthFix'></image>
+      </view>
+      <text>加盟我们</text>
+    </navigator>
+  </view>
+  <view class='foot_one'>
+    <navigator hover-class="none" url="/pages/product/news/news">
+      <view>
+        <image src="../../images/xwzx.png" mode='widthFix'></image>
+      </view>
+      <text>新闻资讯</text>
+    </navigator>
+  </view>
+  <view class='foot_one'>
+    <navigator hover-class="none" url='/pages/product/aboutus/aboutus?file_name=dgn' mode='widthFix'>
+      <view>
+        <image src="../../images/sjhz.png" mode='widthFix'></image>
+      </view>
+      <text>商机合作</text>
+    </navigator>
+  </view>
+</view>
+
+<!-- 广告位 -->
+<block wx:for="{{view.ggw}}" wx:for-item="vv">
+  <view class="{{vv.class_name}}">
+    <block wx:for="{{vv.children}}" wx:for-item="vo">
+      <navigator hover-class="none" url="{{vo.url}}">
+        <image src="{{globalData.img_domain}}/compress/{{vo.img}}" mode='widthFix' style='width:100%;'></image>
+      </navigator>
+    </block>
+  </view>
+</block>
+<view style="clear:both;"></view>
+
+<view style='width:90%;overflow:hidden;margin:22rpx 5%;border:1px solid #e5e5e5;border-radius:22.5rpx;'>
+  <input type='text' placeholder='搜索' style='width:75%;height:55rpx;outline:none;border:none;float:left;text-indent:0.5em;line-height:55rpx;padding-left:20rpx;' bindinput="search"></input>
+  <button style='width:18.5%;height:65rpx;float:right;text-align:center;line-height:65rpx;font-size:26.25rpx;background:#ff4e42;color:white;' catchtap='search_product'>搜索</button>
+</view>
+
+<!-- 新品推荐 -->
+<view class="xinpin" wx:if="{{view.zuixin.length}}">
+  <text class="tuijian">新品推荐</text>
+  <text class="more" catchtap="xilie" id="新品推荐">更多></text>
+</view>
+<view style="clear:both;"></view>
+<view class="column" wx:if="{{view.zuixin}}">
+  <block wx:for="{{view.zuixin}}" wx:for-index="key" wx:for-item="vo">
+    <navigator class="book" url="/pages/product/detail/detail?id={{vo.id}}">
+      <image src="{{globalData.img_domain}}/compress/{{vo.img}}"></image>
+      <text>{{vo.name}}</text>
+      <view class="price">¥{{vo.price}}</view>
+    </navigator>
+  </block>
+  <view style="clear:both;"></view>
+</view>
+
+<!-- 热销推荐 -->
+<view class="xinpn" wx:if="{{view.remai.length}}">
+  <text class="tuijian">热销推荐</text>
+  <text class="more" catchtap="xilie" id="热销推荐">更多></text>
+</view>
+<view style="clear:both;"></view>
+<view class="column" wx:if="{{view.remai}}">
+  <block wx:for="{{view.remai}}" wx:for-index="key" wx:for-item="vo">
+    <navigator class="book" url="/pages/product/detail/detail?id={{vo.id}}">
+      <image src="{{globalData.img_domain}}/compress/{{vo.img}}"></image>
+      <text>{{vo.name}}</text>
+      <view class="price">¥{{vo.price}}</view>
+    </navigator>
+  </block>
+  <view style="clear:both;"></view>
+</view>
+<!-- 店长推荐 -->
+<!-- <view class="xinpin" wx:if="{{view.tuijian.length}}">
+  <text class="tuijian">店长推荐</text>
+  <text class="more" catchtap="xilie" id="店长推荐">更多></text>
+</view>
+<view style="clear:both;"></view>
+
+<view class="heng" wx:if="{{view.tuijian}}">
+  <block wx:for="{{view.tuijian}}" wx:for-index="key" wx:for-item="vo">
+    <navigator class="pingfan" url="/pages/product/detail/detail?id={{vo.id}}">
+      <image src="{{globalData.img_domain}}/compress/{{vo.img}}"></image>
+      <view class="middle">
+        <text>{{vo.name}}</text>
+        <view class="yuanjia">¥{{vo.price}}</view>
+        <view class="sale">¥{{vo.old_price}}}</view>
+      </view>
+      <button class="goumai">立即购买</button>
+    </navigator>
+  </block>
+</view> -->
+
+<block wx:for="{{view.res}}" wx:for-index="key" wx:for-item="vo">
+  <view wx:if="{{vo.children.length}}">
+    <view class="xinpin">
+      <text class="tuijian">{{vo.name}}</text>
+      <text class="more" catchtap="xilie1" id="{{vo.id}}">更多></text>
+    </view>
+    <view style="clear:both;"></view>
+    <scroll-view class="zonghe" scroll-x="true">
+      <block wx:for="{{vo.children}}" wx:for-index="kk" wx:for-item="vv">
+        <navigator class="jiaoyu" url="/pages/product/detail/detail?id={{vv.id}}">
+          <image src="{{globalData.img_domain}}/compress/{{vv.img}}"></image>
+          <text>{{vv.name}}</text>
+          <view class="price">¥{{vv.price}}</view>
+        </navigator>
+      </block>
+    </scroll-view>
+  </view>
+</block>

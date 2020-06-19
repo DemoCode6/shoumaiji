@@ -1,0 +1,36 @@
+<template name="footer">
+<view class='footer'>
+  <view class='foot_one'>
+    <navigator hover-class="none" url='/pages/product/index/index'>
+      <view>
+        <image src="../../images/{{footer[0]}}" mode='widthFix' style='width:60rpx;'></image>
+      </view>
+      <text>首页</text>
+    </navigator>
+  </view>
+  <view class='foot_one'>
+    <navigator hover-class="none" url='/pages/product/xilie/xilie'>
+      <view>
+        <image src="../../images/{{footer[1]}}" mode='widthFix'></image>
+      </view>
+      <text>产品中心</text>
+    </navigator>
+  </view>
+  <view class='foot_one'>
+    <navigator hover-class="none" url='/pages/member/gwc/gwc'>
+      <view>
+        <image src="../../images/{{footer[2]}}" mode='widthFix' style='width:60rpx;'></image>
+      </view>
+      <text>购物车</text>
+    </navigator>
+  </view>
+  <view class='foot_one'>
+    <navigator hover-class="none" url='/pages/member/index/index'>
+      <view>
+        <image src="../../images/{{footer[3]}}" mode='widthFix'></image>
+      </view>
+      <text>个人中心</text>
+    </navigator>
+  </view>
+</view>
+</template>

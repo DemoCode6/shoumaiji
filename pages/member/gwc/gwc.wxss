@@ -1,0 +1,263 @@
+/* pages/gwc/gwc.wxss */
+page{
+  padding-bottom: 0;
+}
+
+.heads{
+	width: 100%;
+	height: 37.5rpx;
+	padding: 15rpx 0;
+	background-color: #fff;
+}
+
+.heads navigator{
+	width: 16%;
+	float: left;
+	height: 37.5rpx;
+	border-right: 1px solid #ff4e42;
+	text-align: center;
+	line-height: 37.5rpx;
+  font-size: 26.25rpx;
+}
+
+.heads navigator:last-child{
+	border: none;
+}
+
+.heads navigator.ffa text{
+	border-bottom: 1px solid #ff4e42;
+	padding-bottom: 11.25rpx;
+}
+
+.heads view{
+	width: 16%;
+	float: left;
+	height: 37.5rpx;
+	border-right: 1px solid #ff4e42;
+	text-align: center;
+	line-height: 37.5rpx;
+  font-size: 26.25rpx;
+}
+
+.heads view:last-child{
+	border: none;
+}
+
+.heads view.ffa text{
+	border-bottom: 1px solid #ff4e42;
+	padding-bottom: 11.25rpx;
+}
+
+
+.infor{
+	width: 90%;
+	overflow: hidden;
+	border-radius: 5px;
+	border: 1px solid #E5E5E5;
+	margin-left: 5%;
+	margin-top: 15rpx;
+	padding-bottom: 9rpx;
+	background-color: white;
+}
+
+.infor .nunp{
+	width: 95%;
+	margin-left: 2.5%;
+	margin-top: 11.25rpx;
+	overflow: hidden;
+	padding-bottom: 11.25rpx;
+}
+
+.infor .nunp .pict{
+	width: 30%;
+	float: left;
+	height: 165rpx;
+	overflow: hidden;
+}
+
+.infor .nunp .namea{
+	width: 68%;
+	float: left;
+	margin-left: 1%;
+	position: relative;
+}
+
+.infor .nunp .namea .dela{
+	position: absolute;
+	width: 45rpx;
+	overflow: hidden;
+	right: 9.75rpx;
+	top: 41.25rpx;
+}
+
+.infor .nunp .namea .dela text{
+	font-size: 0.8rem;
+	color: #C3C3C3;
+	float: left;
+	line-height:112.5rpx;
+}
+
+.infor .nunp .namea .dela image{
+  width: 45rpx;
+	height:45rpx;
+	float: left;
+}
+
+.infor .nunp .pict image{
+	width: 90%;
+}
+
+.infor .nunp .namea .proname{
+	font-size: 26.25rpx;
+	margin-bottom: 9.75rpx;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.infor .nunp .namea .state{
+	color: #b9b9b9;
+	font-size: 24rpx;
+	margin-bottom: 7.5rpx;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.infor .nunp .prize{
+	font-size: 37.5rpx;
+	color: #ff5044;
+}
+
+.infor .nunp input{
+	width: 75rpx;
+	text-align: center;
+	color: #b4b4b4;
+}
+
+.infor .nunp .fh{
+	display: inline-block;
+	width: 40rpx;
+	height: 40rpx;
+	border: 1px solid #b4b4b4;
+	color: #b4b4b4;
+	text-align: center;
+	margin-top: 11.25rpx;
+	    line-height: 30rpx;
+}
+
+.infor .nunp .fhh{
+	display: inline-block;
+	width: 40rpx;
+	height: 40rpx;
+	/* border: 1px solid #b4b4b4; */
+	color: #b4b4b4;
+	text-align: center;
+	margin-top: 11.25rpx;
+	    line-height: 30rpx;
+}
+
+.infor .nunp .llef{
+	line-height: 60rpx;
+	color: #717171;
+	float: left;
+}
+
+.infor .nunp .rrig{
+	float: right;
+	color: #717171;
+	line-height: 60rpx;
+}
+
+.infor .nunp textarea{
+	width: 80%;
+	float: right;
+	height: 150rpx;
+	border: none;
+	outline: none;
+	resize: none;
+	line-height:  60rpx;
+}
+
+.pay{
+	width: 100%;
+	height: 82.5rpx;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	border-top: 1px solid #E5E5E5;
+	background-color: white;
+	z-index: 99999;
+}
+
+.pay button{
+	width: 300rpx;
+	height: 100%;
+	background-color: #ff5933;
+	color: white;
+	outline: none;
+	border: none;
+	float: right;
+  font-size: 26.25rpx;
+  border-radius: 0;
+  line-height: 82.5rpx;
+}
+
+.pay .all{
+	line-height: 82.5rpx;
+	float: right;
+	margin-right:15rpx;
+}
+
+.pay .all .mm{
+	color: #ff5933;
+}
+
+.pay .cirle{
+	display: block;
+	width: 22.5rpx;
+	height: 22.5rpx;
+	border-radius: 50%;
+	border: 1px solid #d9d9d9;
+	margin-left: 9.75rpx;
+	margin-right: 11.25rpx;
+	float: left;
+	margin-top: 26.25rpx;
+}
+
+.item_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20rpx;
+}
+ 
+.select_icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+ 
+.text {
+  margin-left: 30rpx;
+}
+
+.infor .xz{
+width: 8%;
+float: left;
+height: 37.5rpx;
+margin-top: 37.5rpx;
+}
+
+.infor .xz text{
+display: block;
+width: 22.5rpx;
+height: 22.5rpx;
+border-radius: 50%;
+border: 1px solid #d9d9d9;
+margin-top:37.5rpx;
+margin-left: 9.75rpx;
+}
+
+.infor .onxz text,.infor .oncirle{
+  border: 1px solid #ff4e42;
+}

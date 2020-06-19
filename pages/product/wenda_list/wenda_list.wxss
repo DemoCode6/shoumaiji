@@ -1,0 +1,24 @@
+@import "/css/iconfont.wxss";
+.wrap{
+  width: 100%;
+  padding: 0 28rpx;
+  box-sizing: border-box;
+}
+.message_list{
+  font-size: 28rpx;
+  border-bottom: 2rpx solid #efefef;
+  padding: 30rpx 0;
+}
+.message_list view:nth-child(1){
+  width: 90%;
+  float: left;
+}
+.message_list text{
+  float: right;
+}
+.huida_wrap{
+  font-size: 26rpx;
+  line-height: 40rpx;
+  padding-top: 30rpx;
+
+}

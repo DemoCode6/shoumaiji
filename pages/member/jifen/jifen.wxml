@@ -1,0 +1,23 @@
+<view class="jf" style='	background: url({{globalData.static_domain}}jxx.png)no-repeat;background-size: 100% 100%;'>
+  <view class="bta">我的积分：</view>
+  <view class="cir">
+    <view>{{jifen}}</view>
+  </view>
+</view>
+<view class="record">积分记录</view>
+<view class="records">
+  <block wx:for="{{view}}" wx:for-index="key" wx:for-item="vo">
+    <view class='oli'>
+      <view class="left">
+        <view class="lj">{{vo.summary}}</view>
+        <view class="time">{{vo.date}}</view>
+      </view>
+      <view class="nuns">
+        {{vo.type == 0 ? '+' : '-'}}{{vo.number}}
+      </view>
+    </view>
+  </block>
+</view>
+
+<!-- <import src="../../templates/footer/footer.wxml"/>
+<template is="footer" data="{{footer}}"/> -->

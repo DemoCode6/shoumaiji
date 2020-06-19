@@ -1,0 +1,84 @@
+/* pages/jf/jf.wxss */
+.jf{
+	width: 100%;
+	height: 187.5rpx;
+	/* background: url(../images/jxx.png)no-repeat;
+	background-size: 100% 100%; */
+	position: relative;
+	overflow: hidden;
+}
+
+.jf .bta{
+	position: absolute;
+	left: 22.5rpx;
+	top: 22.5rpx;
+	color: white;
+	font-size: 30rpx;
+}
+
+.jf .cir{
+	width: 112.5rpx;
+	height:112.5rpx;
+	border: 1px solid #fff;
+	text-align: center;
+	line-height: 112.5rpx;
+	margin:52.5rpx auto;
+	border-radius: 50%;
+}
+
+.jf .cir view{
+	font-size: 37.5rpx;
+	color: white;
+}
+
+.record{
+	text-align: center;
+	line-height: 45rpx;
+	font-size: 30rpx;
+	margin: 36.5rpx 0;
+}
+
+
+.records{
+	width: 95%;
+	margin-left: 2.5%;
+	overflow: hidden;
+}
+
+.records .oli{
+	width: 100%;
+	height: 97.5rpx;
+	border-bottom: 1px solid #ebebeb;
+	background-color: white;
+	padding-top: 11.25rpx;
+  overflow: hidden;
+}
+
+.records .oli .left{
+	width: 70%;
+	height: 100%;
+	float: left;
+}
+
+.records .oli .nuns{
+	width: 30%;
+	height: 100%;
+	float: left;
+	text-align: right;
+	line-height: 22.5rpx;
+	color: #ff4e42;
+	font-size: 37.5rpx;
+  margin-top: 22rpx;
+}
+
+.records .oli .left .lj{
+	font-size: 30rpx;
+	color: #747474;
+	margin-bottom: 11.25rpx;
+}
+
+.records .oli .left .time{
+	font-size: 26.25rpx;
+	color: #bababa;
+	margin-bottom: 26.25rpx;
+}

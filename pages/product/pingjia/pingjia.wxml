@@ -1,0 +1,110 @@
+<!--pages/pinjialist/pinjialist.wxml-->
+<view class="bqian">
+  <view class="aqian {{type == 0 ? 'foc' : ''}}" catchtap="onchange" id='0'>全部({{view.pinglun_number}})</view>
+  <view class="aqian {{type == 1 ? 'foc' : ''}}" catchtap="onchange" id='1'>最新</view>
+  <view class="aqian {{type == 2 ? 'foc' : ''}}" catchtap="onchange" id='2'>追评({{view.zhuiping_number}})</view>
+  <view class="aqian {{type == 3 ? 'foc' : ''}}" catchtap="onchange" id='3'>有图({{view.youtu_number}})</view>
+  <view class="plmethod {{type == 4 ? 'foc' : ''}}" catchtap="onchange" id='4'>好评({{view.good_pinglun_number}})</view>
+  <view class="plmethod {{type == 5 ? 'foc' : ''}}" catchtap="onchange" id='5'>中评({{view.zhong_pinglun_number}})</view>
+  <view class="plmethod {{type == 6 ? 'foc' : ''}}" catchtap="onchange" id='6'>差评({{view.cha_pinglun_number}})</view>
+</view>
+
+<block wx:for="{{res}}" wx:for-index="key" wx:for-item="vo">
+  <block wx:if="{{vo.showhide}}">
+    <view id="list">
+      <view class="listpl" id="pl">
+        <view class='olis'>
+          <view class="host">
+            <view class="ppic">
+              <image src="{{globalData.img_domain}}/{{vo.getmember.img}}" mode="widthFix" />
+            </view>
+            <text>{{vo.getmember.name}}{{vo.showhide}}</text>
+          </view>
+          <view class="times" style="margin-left: 60rpx;width: 80%;margin-top: -22.5rpx;font-size: 12px;">
+            <text>{{vo.date}}</text>
+            <text style="margin-left: 60rpx;">产品规格：</text>
+            <text>{{vo.guige_name}}</text>
+          </view>
+          <view class="discuss">
+            <view class="ply">{{vo.summary}}</view>
+            <view class="post">
+              <block wx:for="{{vo.getproductimg}}" wx:for-index="key" wx:for-item="vv">
+                <image class="list-img" src="{{globalData.img_domain}}/compress/{{vv.img}}" mode="widthFix" />
+              </block>
+            </view>
+          </view>
+          <view wx:if="{{vo.huifu_date != ''}}" style="width: 85%;margin-left: 60rpx;margin-bottom:22.5rpx;border-radius: 5px;background-color: #f8f8f8;padding: 22.5rpx;">
+            <view style="color: #5c5c5c;font-weight: 600;margin-bottom: 15rpx;">
+              <image src="{{globalData.static_domain}}kefu.png" style="width: 30rpx;" mode="widthFix" /> 掌柜回复：
+            </view>
+            <view style="color: #5e5e5e;">{{vo.huifu_content}}</view>
+          </view>
+          <!-- <view style="width: 95%;margin-left: 60rpx;">
+            <image src="{{globalData.static_domain}}heart.png" status="0" style="width: 30rpx;" mode="widthFix" />
+            <text style="font-size: 24rpx;color: #cbcbcb;">10</text>
+          </view> -->
+
+          <view class="discuss" wx:if="{{vo.zhuiping != null}}">
+            <view class="ply">追评：{{vo.zhuiping.summary}}</view>
+            <view class="post">
+              <block wx:for="{{vo.zhuiping.getproductimg}}" wx:for-index="key" wx:for-item="vv">
+                <image class="list-img" src="{{globalData.img_domain}}/compress/{{vv.img}}" mode="widthFix" />
+              </block>
+            </view>
+          </view>
+          <view wx:if="{{vo.zhuiping.huifu_date != null}}" style="width: 85%;margin-left: 60rpx;margin-bottom:22.5rpx;border-radius: 5px;background-color: #f8f8f8;padding: 22.5rpx;">
+            <view style="color: #5c5c5c;font-weight: 600;margin-bottom: 15rpx;">
+              <image src="{{globalData.static_domain}}kefu.png" style="width: 30rpx;" mode="widthFix" /> 掌柜回复：
+            </view>
+            <view style="color: #5e5e5e;">{{vo.zhuiping.huifu_content}}</view>
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </block>
+</block>
+<view style='text-align:center;color:#e1e1e1;' wx:if="{{bottom}}">--到底了--</view>
+
+
+
+<view class="addcar" style="border: none;">
+  <view class="link">
+    <view class="kf">
+      <navigator hover-class="none" catchtap='jump1'>
+        <view>
+          <image src="{{globalData.static_domain}}shangcheng.png" mode="widthFix" />
+        </view>
+        <view>商城</view>
+      </navigator>
+    </view>
+
+    <view class="kf"  catchtap="phonecallevent">
+      <view style="margin-top: 1.5rpx;">
+        <image src="{{globalData.static_domain}}kefu.png" mode="widthFix" style="45rpx" />
+      </view>
+      <view>客服</view>
+    </view>
+
+    <view class="kf" catchtap='jump'>
+      <navigator hover-class="none">
+        <view>
+          <image src="{{globalData.static_domain}}gouwuche.png" mode="widthFix" />
+          <text class="nan">2</text>
+        </view>
+        <view>购物车</view>
+      </navigator>
+    </view>
+  </view>
+
+
+  <view class="howa">
+    <view style="background:linear-gradient(to right,#f6c530,#fead21);">
+      <navigator hover-class="none" style="color:#fff;" url='/pages/product/detail/detail?id={{id}}'>加入购物车</navigator>
+    </view>
+    <view style="background:linear-gradient(to right,#f37536,#ff5933);">
+      <navigator hover-class="none" url='/pages/product/detail/detail?id={{id}}' style="color:#fff;">立即购买</navigator>
+    </view>
+    <input type="hidden" id="taozhuang_id" value="0" />
+  </view>
+</view>

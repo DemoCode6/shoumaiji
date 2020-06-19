@@ -1,0 +1,162 @@
+<view class="address" wx:if="{{view.address == null && peisong_type == 0}}">
+  <navigator hover-class="none" class="addb" url="/pages/product/address_add/address_add">
+    <image src="{{globalData.static_domain}}address.png" class="adda" mode='widthFix' />
+    <text>添加收货地址</text>
+    <image src="{{globalData.static_domain}}bor.png" class="imgbor" mode='widthFix' />
+  </navigator>
+</view>
+
+<view class="address" wx:if="{{view.address != null && peisong_type == 0}}">
+  <view class="lefts">
+    <view class="people">
+      <text>收货人：{{view.address.name}}</text>
+      <text style="text-align: right;">{{view.address.phone}}</text>
+    </view>
+    <view class="place">
+      收货地址：{{view.address.address}}{{view.address.address_detail}}
+    </view>
+  </view>
+  <navigator hover-class="none" class="changes" url="/pages/product/address_edit/address_edit?id={{view.address.id}}">
+    <image src="{{globalData.static_domain}}change.png" mode='widthFix' />
+  </navigator>
+  <image src="{{globalData.static_domain}}bor.png" class="imgbor" mode='widthFix' />
+</view>
+
+<view class="infor">
+  <block wx:for="{{view.res.getdetail}}" wx:for-index="key" wx:for-item="vo">
+    <view class="nunp product" idd="{$vo.id}">
+      <view class="pict">
+        <image src="{{globalData.img_domain}}/{{vo.getproduct.img}}" mode='widthFix' />
+      </view>
+      <view class="namea">
+        <view class="proname">{{vo.getproduct.name}}</view>
+        <view class="state">{{vo.shuxing}}</view>
+        <view style="margin-top: 0.8rem;">
+          <text class="prize">￥<text class="prize" id="price">{{vo.getshuxingmingshuxingzhi.price}}</text></text>
+          <text class="fh" catchtap='jia' id='{{key}}' style="float: right;">+</text>
+          <text type="number" class='fhh' style="float: right;">{{vo.number}}</text>
+          <text class="fh" catchtap='jian' id='{{key}}' style="float: right;">-</text>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <block wx:if="{{view.youhuiquan != ''}}">
+    <view class="nunp" catchtap="youhuiquan">
+      <text class="llef">优惠券</text>
+      <text class="rrig">{{youhuiquan_text}}</text>
+    </view>
+  </block>
+  <block wx:if="{{yunfei.mian_money != 0 && view.res.type == 2}}">
+    <view class="nunp">
+      <text class="llef">运费（{{yunfei.yunfei_money}}元）</text>
+      <text class="rrig">购物满{{yunfei.mian_money}}免运费</text>
+    </view>
+  </block>
+  <view class="nunp" style="display:none;">
+    <text class="llef">会员升级</text>
+    <block wx:for="{{view.member_grade}}" wx:for-item="vo">
+      <text class="rrig">满{{ vo.money}}元升级为{{vo.name}}，购物享{{vo.zekou}}折优惠</text>
+    </block>
+  </view>
+  <view class="nunp" style="border: none;">
+    <text class="llef">卖家留言</text>
+    <textarea bindinput="liuyan" name="liuyan" placeholder="有什么需求可以在这里留言"></textarea>
+  </view>
+</view>
+<view class="total">
+  <text style="display:inline-block;float:left;" wx:if="{{globalData.user_msg.zekou != 100}}">{{globalData.user_msg.getmembergrade.name}}享{{globalData.user_msg.zekou}}折优惠</text>
+  <text>共计<text class='red'>{{view.count}}</text>件商品</text>
+</view>
+
+<view class="paytitle">支付平台</view>
+<view class="WeChat" bindtap="payselect" data-index="0">
+  <text class="iconfont icon-weixin"></text>
+  <text class="payName">微信支付</text>
+  <text class="iconfont {{pay_type == 0?'icon-xuanzhong1':'icon-xuanzhongyuandian'}}" style="float:right"></text>
+</view>
+
+<view class="WeChat" bindtap="payselect" data-index="1">
+  <text class="iconfont icon-jifen1"></text>
+  <text class="payName">账户余额￥{{globalData.user_msg.account}}</text>
+  <text class="iconfont {{pay_type == 1?'icon-xuanzhong1':'icon-xuanzhongyuandian'}}" style="float:right"></text>
+</view>
+
+<view class="WeChat" wx:if="{{globalData.user_msg.zekou != 100}}">
+  <text class="iconfont icon-youhuiquan-_fuzhi"></text>
+  <text class="payName"> 您是商家会员，享受{{globalData.user_msg.zekou}}折优惠</text>
+</view>
+
+<view class="paytitle">配送方式</view>
+<view class="WeChat" bindtap="peisong_select" data-index="0">
+  <text class="iconfont icon-express"></text>
+  <text class="payName">快递配送</text> 
+  <text class="iconfont {{peisong_type == 0?'icon-xuanzhong1':'icon-xuanzhongyuandian'}}" style="float:right"></text>
+</view>
+
+<view class="WeChat" bindtap="peisong_select" data-index="1" style="display:none;">
+  <text class="iconfont icon-daodian"></text>
+  <text class="payName">{{ddzt}}</text> 
+  <text class="iconfont {{peisong_type == 1?'icon-xuanzhong1':'icon-xuanzhongyuandian'}}" style="float:right"></text>
+</view>
+<view><input bindinput="phone" wx:if="{{peisong_type == 1}}" placeholder="请输入联系电话" class="phone_input" value="{{ziti_phone}}"></input></view>
+
+<view class="pay">
+  <button class="btnpay" catchtap="pay_money">确认支付</button>
+  <text class="all">合计金额：<text class="mm">￥<text class="mm" id="total1">{{total}}</text></text>
+  </text>
+</view>
+<view class="actives">
+  <view class="img">
+    <image src="{{globalData.static_domain}}/addmoney.png" mode='widthFix'></image>
+  </view>
+  <view class="opc">
+    <view style="font-size: 36rpx;margin-top: 20rpx;margin-bottom: 10rpx;">本次可得{{jifen}}积分</view>
+    <view style="font-size: 40rpx;font-weight: 600;">可提现返利{{fanli}}元</view>
+  </view>
+</view>
+
+<!-- 优惠券 -->
+<view class='prodetail_mask' wx:if="{{youhuiquanHidden}}">
+  <view class="choose_add xzb" style="display: block;padding-bottom: 0rem;">
+    <image src="{{globalData.static_domain}}guanbi.png" mode="widthFix" class="off" bindtap='clickOff' />
+    <view style="width: 100%;height: 525rpx;overflow-y: scroll;">
+      <block wx:for="{{view.youhuiquan}}" wx:for-item="vo">
+        <view class="yhqs" style="width: 95%;overflow: hidden;border-bottom: 1px solid #e1e1e1;height: 150rpx;margin: 0 auto;" catchtap='xuanze' id='{{vo.id}}'>
+          <view class="moneys" style="width: 25%;float: left;text-align: center;line-height: 150rpx;color: red;font-size: 37.5rpx;">
+            ￥
+            <block wx:if="{{vo.getyouhuiquan.type == 1}}">
+              <text>{{vo.getyouhuiquan.price}}</text>
+            </block>
+            <block wx:if="{{vo.getyouhuiquan.type == 2}}">
+              <text>{{vo.getyouhuiquan.price[1]}}</text>
+            </block>
+          </view>
+          <view class="yhxx" style="width: 75%;float: left;height: 100%;">
+            <view style="color: #999;font-size: 22.5rpx;margin-top: 22.5rpx;">{{vo.getyouhuiquan.name}}</view>
+            <view style="color: #333;font-size: 26.25rpx;">
+              <block wx:if="{{vo.getyouhuiquan.type == 1}}">
+                <text>{{vo.getyouhuiquan.price}}元</text>
+              </block>
+              <block wx:if="{{vo.getyouhuiquan.type == 2}}">
+                <text>满{{vo.getyouhuiquan.price[0]}}元减{{vo.getyouhuiquan.price[1]}}元</text>
+              </block>
+            </view>
+            <view style="color: #999;font-size: 22.5rpx;">有效期至{{vo.getyouhuiquan.expire_date}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<view class="tan_mask" wx:if="{{tanHidd}}" catchtap='tan_quxiao'></view>
+<view class='tan_wrap' wx:if="{{tanHidd}}">
+  <view class='tan_title_wrap'>请选择店铺</view>
+  <view style='width:100%;height:80rpx;'></view>
+  <view class='jiaru_auto'>
+    <block wx:for="{{dianpu}}" wx:for-index="key" wx:for-item="vo">
+      <view class='jiaru_wrap' catchtap="select_dianpu" id="{{vo.id}}" data-name="{{vo.name}}">{{vo.name}}<text style="float:right">选择</text></view>
+    </block>
+  </view>
+</view>

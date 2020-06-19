@@ -1,0 +1,31 @@
+<!--pages/xgaddress/xgaddress.wxml-->
+<block wx:for="{{view.res}}" wx:for-index="key" wx:for-item="vo">
+<view class="address" wx:if="{{vo.showhide}}">
+  <view class="lefts">
+    <view class="people">
+      <text>收货人：{{vo.name}}</text>
+      <text style="text-align: right;">{{vo.phone}}</text>
+      <!-- <text class="mr">默认</text> -->
+    </view>
+    <view class="place">
+      收货地址：{{vo.address}}{{vo.address_detail}}
+    </view>
+  </view>
+  <view  class="changes">
+    <navigator hover-class="none" url='/pages/member/address_edit/address_edit?id={{vo.id}}' style='width:100%;height:55rpx;'>
+      <image src="{{globalData.static_domain}}edit.png" mode='widthFix' style='width:30rpx;'/>
+    </navigator>
+    <view  style='width:100%;height:55rpx;'>
+    <image src="{{globalData.static_domain}}del.png" catchtap='deladdress' id='{{vo.id}}' data-key="{{key}}" mode="widthFix" style='width:50rpx;' mode='widthFix' />
+    </view>
+  </view>
+</view>
+</block>
+<view class="bnts">
+  <navigator hover-class="none" url='/pages/member/address_add/address_add' style='width:100%;height:100%;text-align:center;line-height:75rpx;'>
+    <text style='color:white;'>添加地址</text>
+  </navigator>
+</view>
+
+<!-- <import src="../../templates/footer/footer.wxml"/>
+<template is="footer" data="{{footer}}"/> -->

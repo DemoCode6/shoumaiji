@@ -1,0 +1,59 @@
+/* pages/pjxq/pjxq.wxss */
+.ypj{
+	width: 100%;
+	overflow: hidden;
+	background-color: white;
+}
+
+.ypj .host{
+	width: 100%;
+	height: 49.5rpx;
+	margin-top: 11.25rpx;
+}
+
+.ypj .host .ppic{
+	width: 45rpx;
+	height: 45rpx;
+	border-radius: 50%;
+	float: left;
+	margin-left:11.25rpx;
+}
+
+.ypj .host .ppic image{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.ypj .host text{
+	float: left;
+	margin-left: 11.25rpx;
+	line-height: 45rpx;
+}
+
+.ypj .host .hy{
+	float: left;
+	margin-left: 11.25rpx;
+	margin-top:22.5rpx;
+	width: 15rpx;
+}
+
+.ypj .times,.ypj .ply{
+	width: 85%;
+    margin-left: 8.5%;
+}
+
+.ypj .times text{
+	color: #b1b1b1;
+	margin-right: 11.25rpx;
+}
+
+.ypj .ply{
+	margin-top:11.25rpx;
+	padding-bottom: 18.75rpx;
+}
+
+.post{
+width: 85%;
+margin-left: 60rpx;
+}

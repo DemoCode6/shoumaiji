@@ -1,0 +1,149 @@
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='height:224rpx;'>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item style="width:100%;overflow:hidden;">
+      <image src="{{globalData.img_domain}}/compress/{{item.img}}" class="slide-image" style='width:100%' mode="widthFix" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class='int_foot'>
+  <view class='foot_one'>
+    <navigator hover-class="none" url='/pages/product/aboutus/aboutus' hover-class='none'>
+      <view>
+        <image src="../../images/jianjie.png" mode='widthFix'></image>
+      </view>
+      <text>公司简介</text>
+    </navigator>
+  </view>
+  <view class='foot_one'>
+    <navigator catchtap="miaosha" hover-class="none">
+      <view>
+        <image src="../../images/wenda.png" mode='widthFix'></image>
+      </view>
+      <text>限时秒杀</text>
+    </navigator>
+  </view>
+  <view class='foot_one'>
+    <navigator hover-class="none" url="/pages/product/news/news">
+      <view>
+        <image src="../../images/news.png" mode='widthFix'></image>
+      </view>
+      <text>新闻资讯</text>
+    </navigator>
+  </view>
+  <view class='foot_one'>
+    <navigator hover-class="none" url='/pages/member/my_cards/my_cards' mode='widthFix'>
+      <view>
+        <image src="../../images/duibi.png" mode='widthFix'></image>
+      </view>
+      <text>会员卡</text>
+    </navigator>
+  </view>
+</view>
+<!-- <navigator url="/pages/product/dianyuan_saoma/dianyuan_saoma?id=3">积分</navigator>
+<navigator url="/pages/product/chanpin_hexiao/chanpin_hexiao?id=32">核销</navigator> -->
+<view style='width:90%;overflow:hidden;margin:15rpx 5%;border:1px solid #e5e5e5;border-radius:22.5rpx;'>
+  <input type='text' placeholder='搜索' style='width:75%;height:55rpx;outline:none;border:none;float:left;text-indent:0.5em;line-height:55rpx;padding-left:20rpx;' bindinput="search"></input>
+  <button style='width:18.5%;height:65rpx;float:right;text-align:center;line-height:65rpx;font-size:26.25rpx;background:#ff4e42;color:white;' catchtap='search_product'>搜索</button>
+</view>
+
+<swiper catchtap="member_card" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='height:430rpx;'>
+  <block wx:for="{{view.member_cards}}">
+    <swiper-item style="width:100%;overflow:hidden;">
+      <image src="{{globalData.img_domain}}/compress/{{item.img}}" class="slide-image" style='width:100%' mode="widthFix" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 广告位 -->
+<block wx:for="{{view.ggw}}" wx:for-item="vv">
+  <view class="{{vv.class_name}}">
+    <block wx:for="{{vv.children}}" wx:for-item="vo">
+      <navigator hover-class="none" url="{{vo.url}}"><image src="{{globalData.img_domain}}/compress/{{vo.img}}" mode='widthFix' style='width:100%;'></image></navigator>
+    </block>
+  </view>
+</block>
+
+<!-- 特价 -->
+<view class="actives_pro" style="width: 96%;padding: 0 2%;">
+<block wx:for="{{view.tejia_products}}" wx:for-item="vv">
+      <view style="width: 49%;background-color: white;border-radius: 5px;" class='lis'>
+        <navigator hover-class="none" url="/pages/product/detail/detail?id={{vv.id}}">
+          <view class="proimgs">
+            <block wx:if="{{vv.condition == 1}}">
+              <text style="color:white;font-size: 22.5rpx;padding: 3.75rpx;background: url({{globalData.static_domain}}starbg.png)no-repeat;background-size: 100% 100%;position: absolute;right: 11.25rpx;top: 11.25rpx;">限时特惠</text>
+            </block>
+            <block wx:if="{{vv.condition == 2}}">
+              <text style="color:white;font-size: 22.5rpx;padding: 3.75rpx;background: url({{globalData.static_domain}}starbg.png)no-repeat;background-size: 100% 100%;position: absolute;right: 11.25rpx;top: 11.25rpx;">拼团</text>
+            </block>
+            <image src="{{globalData.img_domain}}/compress/{{vv.img}}" mode='widthFix'></image>
+          </view>
+        </navigator>
+        <view class="procenter">
+          <navigator hover-class="none" style="font-size: 29.25rpx;" url="/pages/product/detail/detail?id={{vv.id}}">
+            {{vv.name}}
+          </navigator>
+        </view>
+        <!-- <view class="proprize">
+          <text class="ppa" style="display: inline;">
+            <text style="font-size: 22.5rpx;">会员￥</text>
+            <text style="font-size: 29.25rpx;">{{vv.huiyuan_price}}</text>
+          </text>
+        </view> -->
+        <view class="proprize">
+          <text class="ppa" style="display: inline;">
+            <text style="font-size: 22.5rpx;">￥</text>
+            <text style="font-size: 29.25rpx;">{{vv.price}}</text>
+          </text>
+          <text style="color: #c1c1c1;font-size: 29.25rpx;float: right;"> 已售：{{vv.sale_number}}</text>
+          <view class="moredo" style="display:none;">
+            <text style="float: right;color: #878787;" class="clicle">...</text>
+          </view>
+        </view>
+      </view>
+    </block>
+    </view>
+<!-- 分类 -->
+<block wx:for="{{view.res}}" wx:for-index="key" wx:for-item="vo">
+  <view wx:if="{{vo.children != ''}}" class="actives_pro" style="width: 96%;padding: 0 2%;">
+    <view catchtap='xilie' id='{{vo.id}}'>
+      <view style="font-size: 36rpx;padding:24rpx 10rpx;">▍{{vo.name}}</view>
+      <image wx:if="{{vo.img}}" src="{{globalData.img_domain}}/compress/{{vo.img}}" mode='widthFix' style='width:100%;'></image>
+    </view>
+    <block wx:for="{{vo.children}}" wx:for-item="vv">
+      <view style="width: 49%;background-color: white;border-radius: 5px;" class='lis'>
+        <navigator hover-class="none" url="/pages/product/detail/detail?id={{vv.id}}">
+          <view class="proimgs">
+            <block wx:if="{{vv.condition == 1}}">
+              <text style="color:white;font-size: 22.5rpx;padding: 3.75rpx;background: url({{globalData.static_domain}}starbg.png)no-repeat;background-size: 100% 100%;position: absolute;right: 11.25rpx;top: 11.25rpx;">限时特惠</text>
+            </block>
+            <block wx:if="{{vv.condition == 2}}">
+              <text style="color:white;font-size: 22.5rpx;padding: 3.75rpx;background: url({{globalData.static_domain}}starbg.png)no-repeat;background-size: 100% 100%;position: absolute;right: 11.25rpx;top: 11.25rpx;">拼团</text>
+            </block>
+            <image src="{{globalData.img_domain}}/compress/{{vv.img}}" mode='widthFix'></image>
+          </view>
+        </navigator>
+        <view class="procenter">
+          <navigator hover-class="none" style="font-size: 29.25rpx;" url="/pages/product/detail/detail?id={{vv.id}}">
+            {{vv.name}}
+          </navigator>
+        </view>
+        <!-- <view class="proprize">
+          <text class="ppa" style="display: inline;">
+            <text style="font-size: 22.5rpx;">会员￥</text>
+            <text style="font-size: 29.25rpx;">{{vv.huiyuan_price}}</text>
+          </text>
+        </view> -->
+        <view class="proprize">
+          <text class="ppa" style="display: inline;">
+            <text style="font-size: 22.5rpx;">￥</text>
+            <text style="font-size: 29.25rpx;">{{vv.price}}</text>
+          </text>
+          <text style="color: #c1c1c1;font-size: 29.25rpx;float: right;"> 已售：{{vv.sale_number}}</text>
+          <view class="moredo" style="display:none;">
+            <text style="float: right;color: #878787;" class="clicle">...</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</block>
